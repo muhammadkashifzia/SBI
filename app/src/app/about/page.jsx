@@ -102,7 +102,6 @@ export default function About() {
               <div className="flex gap-[30px]">
                 <div>
                   <span className="w-[80px] h-[80px] bg-[#9F8C5B] flex rounded-full text-white justify-center items-center font-bold text-[18px]">
-                    {' '}
                     Step 1
                   </span>
                 </div>
