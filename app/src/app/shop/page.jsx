@@ -170,16 +170,10 @@ export default function About() {
                   <br />
                 店舗の魅力を伝えて集客を行いましょう。
                   <br />
-                  Step1による共通の利用条件に加え、店舗ごとの利用条件がございます。
+              クーポンの登録が必要となります。
                   <br />
-                  ログイン不要でご使用いただけます。
-                  <br />
-                  口コミを記載する場合にのみXでのログインが必要になります。
-                  <br />
-                  〇は認証マークとなります。
-                  <br />
-                  認証マークがついていない店舗はWeb3
-                  割運営からの確認が済んでいない店舗となりますのでご使用にはご注意ください。
+               使用条件とクーポン内容はご自由に設定いただけます。
+               
                 </p>
               </div>
             </div>
@@ -202,12 +196,18 @@ export default function About() {
               </div>
               <div>
                 <h2 className="text-[20px] md:text-[24px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
-                  対象の商品/サービスを購入
+                QRコードを印刷・設置
                 </h2>
                 <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
-                  店舗でクーポン内容に記載のある対象の商品/サービスを利用条件にご注意頂いたうえでご購入ください。
+               店舗登録が完了したらQRコードが印刷可能になります。
                   <br />
-                  認証マークのついていない店舗についてはご購入前のご確認を推奨いたします
+                 表面にユーザーが読込むQRコード、
+                 <br/>
+                 裏面には設定したクーポン内容・オペレーション方法が記載されております。
+                 <br/>
+                 名刺サイズ(約6×9cm)のポップスタンド(縦)に印刷物を入れ、
+                 <br/>
+                 レジ横などにポップスタンドを設置してください
                 </p>
               </div>
             </div>
@@ -220,7 +220,11 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+        <div className='py-[100px]'>
+          <p>弊社で印刷を行い、ポップスタンド付きで送付させて頂く事も可能です。(有料)</p>
+           <p>「綺麗に印刷したい」「ポップスタンドの用意が面倒」などございましたら、こちらのリンクより注意事項をお読みの上お申込みください。</p>
+        </div>
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -230,17 +234,19 @@ export default function About() {
               </div>
               <div>
                 <h2 className="text-[20px] md:text-[24px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
-                  対象の商品/サービスを購入
+                 送客されたユーザーに割引の提供
                 </h2>
                 <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
-                  店舗でクーポン内容に記載のある対象の商品/サービスを利用条件にご注意頂いたうえでご購入ください。
+               Web3割を閲覧し来店されたユーザーはQRコードを読込み、店舗スタッフに認証画面を提示します。
                   <br />
-                  認証マークのついていない店舗についてはご購入前のご確認を推奨いたします。
+                 認証成功画面が表示されていたら、全店舗共通の条件は満たしている事になります。vvvvvvvvvvvvvv
+                 <br/>
+                 御社で設定した使用条件も満たしていた場合、送客されたユーザーへ設定した割引を提供してください。
                 </p>
               </div>
             </div>
           </div>
-          <div className="flex-1 w-full md:max-w-[599.2px]">
+          <div className="flex-1 w-full md:max-w-[599.2px] my-[100px]">
             <img
               src="/assets/images/customer-image03.png"
               alt="NFT"
@@ -272,6 +278,152 @@ export default function About() {
                 http://discord.gg/bto3
               </a>
             </p>
+          </div>
+        </div>
+      </div>
+       <div className='mt-[100px]'>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[34px]">
+          <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
+            <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px]">
+              <img
+                src="/assets/images/check-image01.jpg"
+                alt="NFT"
+                className="w-full h-full rounded-t-[5px] object-cover object-center"
+              />
+            </div>
+            <div className="pt-[10px] px-[15px] pb-[15px]">
+              <h2 className="font-medium text-[16px] mb-[10px]">Check 1</h2>
+              <p className="font-normal text-[16px]">認証マーク</p>
+            </div>
+          </div>
+          <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
+            <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px]">
+              <img
+                src="/assets/images/check-image01.jpg"
+                alt="Shopping"
+                className="w-full h-full rounded-t-[5px] object-cover object-center"
+              />
+            </div>
+            <div className="pt-[10px] px-[15px] pb-[15px]">
+              <h2 className="font-medium text-[16px] mb-[10px]">Check 2</h2>
+              <p className="font-normal text-[16px]">店舗情報の編集   </p>
+            </div>
+          </div>
+          <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
+            <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
+              <img
+                src="/assets/images/check-image.jpg"
+               alt="Purchase"
+                className="w-full h-full rounded-t-[5px] object-cover object-top"
+              />
+            </div>
+
+            <div className="pt-[10px] px-[15px] pb-[15px]">
+              <h2 className="font-medium text-[16px] mb-[10px]">Check 3</h2>
+              <p className="font-normal text-[16px]">
+               掲載の停止
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+        <div className="mt-[100px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px]">
+          <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
+            <div className="flex gap-[30px]">
+              <div>
+                <span className="w-[80px] h-[80px] bg-[#9F8C5B] flex rounded-full text-white justify-center items-center font-bold text-[18px]">
+                  CHECK 1
+                </span>
+              </div>
+              <div>
+                <h2 className="text-[20px] md:text-[24px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  無料店舗登録
+                </h2>
+                <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
+               無料で店舗登録が行えます
+                  <br />
+                店舗の魅力を伝えて集客を行いましょう。
+                  <br />
+              クーポンの登録が必要となります。
+                  <br />
+               使用条件とクーポン内容はご自由に設定いただけます。
+               
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 w-full md:max-w-[599.2px]">
+            <img
+              src="/assets/images/check-image01.jpg"
+              alt="NFT"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+          <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
+            <div className="flex gap-[30px]">
+              <div>
+                <span className="w-[80px] h-[80px] bg-[#9F8C5B] flex rounded-full text-white justify-center items-center font-bold text-[18px]">
+                  Step 2
+                </span>
+              </div>
+              <div>
+                <h2 className="text-[20px] md:text-[24px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                QRコードを印刷・設置
+                </h2>
+                <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
+               店舗登録が完了したらQRコードが印刷可能になります。
+                  <br />
+                 表面にユーザーが読込むQRコード、
+                 <br/>
+                 裏面には設定したクーポン内容・オペレーション方法が記載されております。
+                 <br/>
+                 名刺サイズ(約6×9cm)のポップスタンド(縦)に印刷物を入れ、
+                 <br/>
+                 レジ横などにポップスタンドを設置してください
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 w-full md:max-w-[599.2px]">
+            <img
+              src="/assets/images/check-image01.jpg"
+              alt="NFT"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-[100px]">
+          <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
+            <div className="flex gap-[30px]">
+              <div>
+                <span className="w-[80px] h-[80px] bg-[#9F8C5B] flex rounded-full text-white justify-center items-center font-bold text-[18px]">
+                  Step 3
+                </span>
+              </div>
+              <div>
+                <h2 className="text-[20px] md:text-[24px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                 送客されたユーザーに割引の提供
+                </h2>
+                <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
+               Web3割を閲覧し来店されたユーザーはQRコードを読込み、店舗スタッフに認証画面を提示します。
+                  <br />
+                 認証成功画面が表示されていたら、全店舗共通の条件は満たしている事になります。vvvvvvvvvvvvvv
+                 <br/>
+                 御社で設定した使用条件も満たしていた場合、送客されたユーザーへ設定した割引を提供してください。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 w-full md:max-w-[599.2px]">
+            <img
+              src="/assets/images/check-image.jpg"
+              alt="NFT"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
