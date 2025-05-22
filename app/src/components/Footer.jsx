@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <div className="text-gray-800">
       {/* Top Navigation */}
-      <nav className="border-b border-[#E9E9E9] py-[20px] md:py-[50px] flex justify-center space-x-[5px] md:space-x-8 text-[13px] md:text-sm flex-wrap">
+      <nav className="border-b border-t border-[#E9E9E9] py-[20px] md:py-[50px] flex justify-center space-x-[5px] md:space-x-8 text-[13px] md:text-sm flex-wrap">
         <span>グルメ</span>
         <span>|</span>
         <span>ファッション</span>

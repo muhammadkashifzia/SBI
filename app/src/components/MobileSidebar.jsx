@@ -1,39 +1,12 @@
 'use client';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function MobileSidebar({
-  sidebarOpen,
-  setSidebarOpen,
-  user,
-  handleLogout,
-}) {
-  const [isClient, setIsClient] = useState(true);
-  const [showLogoutModal, setShowLogoutModal] = useState(false);
-
-  useEffect(() => {
-    setIsClient(false);
-  }, []);
-
+export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
   if (!sidebarOpen) return null;
 
   const handleCloseSidebar = () => {
     setSidebarOpen(false);
-  };
-
-  const handleLogoutClick = () => {
-    setShowLogoutModal(true);
-  };
-
-  const handleCancelLogout = () => {
-    setShowLogoutModal(false);
-  };
-
-  const handleConfirmLogout = () => {
-    setShowLogoutModal(false);
-    setSidebarOpen(false);
-    handleLogout();
   };
 
   return (
@@ -78,23 +51,32 @@ export default function MobileSidebar({
 
             <div className="mb-[30px] border-b border-[#EAEAEA]">
               <ul className="space-y-[15px] text-[#070707] font-medium text-[14px]">
-                <li
-                  className="cursor-pointer bg-[#006BA6]  py-[15px] px-[10px] rounded-[4px] text-white"
-                  onClick={handleCloseSidebar}
-                >
-                  ホーム
+                <li className="w-full">
+                  <Link
+                    href="/"
+                    className="cursor-pointer bg-[#006BA6]  py-[15px] px-[10px] rounded-[4px] text-white w-full block"
+                    onClick={handleCloseSidebar}
+                  >
+                    ホーム
+                  </Link>
                 </li>
-                <li
-                  className="cursor-pointer bg-white py-[15px] px-[10px] rounded-[4px]"
-                  onClick={handleCloseSidebar}
-                >
-                  Web3 割について
+                <li className="w-full">
+                  <Link
+                    href="/about"
+                    className="cursor-pointer bg-white py-[15px] px-[10px] rounded-[4px] w-full block"
+                    onClick={handleCloseSidebar}
+                  >
+                    Web3 割について
+                  </Link>
                 </li>
-                <li
-                  className="cursor-pointer bg-white py-[15px] px-[10px] rounded-[4px]"
-                  onClick={handleCloseSidebar}
-                >
-                  店舗無料掲載希望
+                <li className="w-full">
+                  <Link
+                    href="/about"
+                    className="cursor-pointer bg-white py-[15px] px-[10px] rounded-[4px] w-full block"
+                    onClick={handleCloseSidebar}
+                  >
+                    店舗無料掲載希望
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -105,14 +87,16 @@ export default function MobileSidebar({
                 onClick={handleCloseSidebar}
                 className="w-full bg-[#006BA6] border border-[#006BA6] text-[#ffffff] font-semibold py-2 rounded flex justify-center items-center space-x-2"
               >
-                <span className="text-[14px] font-[600]">ログイン</span>
+                <span className="text-[14px] font-[600]">
+                  ユーザー向けログイン
+                </span>
               </Link>
               <Link
                 href="/register"
                 onClick={handleCloseSidebar}
                 className="w-full bg-[#006BA6] text-white py-2 rounded flex justify-center items-center space-x-2"
               >
-                新規登録
+                店舗向けログイン
               </Link>
               <Link
                 href="/register"
@@ -124,38 +108,14 @@ export default function MobileSidebar({
                     src="/assets/svg/bell-fill-icon.svg"
                     width={16}
                     height={18}
-                    alt='bellIcon'
+                    alt="bellIcon"
                   />
                   <span className="inline-block w-[7px] h-[7px] bg-[#FF0000] rounded-full absolute top-[-3px] left-[9px]"></span>
                 </div>
                 お知らせ
-
-                         <span className='inline-block w-[7px] h-[7px] bg-[#FF0000] rounded-full absolute top-[50%] transform -translate-y-1/2  right-[10px]'></span>
+                <span className="inline-block w-[7px] h-[7px] bg-[#FF0000] rounded-full absolute top-[50%] transform -translate-y-1/2  right-[10px]"></span>
               </Link>
             </div>
-          </div>
-        </div>
-      )}
-
-      {showLogoutModal && (
-        <div className="fixed inset-0 z-60 flex items-center justify-center bg-[#171717a3]">
-          <div className="bg-white rounded-[10px] w-[90%] max-w-[360px] text-center px-[24px] pt-[24px] pb-[48px]">
-            <p className="text-[16px] font-bold mb-[24px]">
-              ログアウトしますか？
-            </p>
-            <hr className="mb-[32px] text-[#DEDEDE]" />
-            <button
-              onClick={handleConfirmLogout}
-              className="bg-[#FF0000] text-white w-full py-3 rounded-[10px] font-bold mb-[24px]"
-            >
-              ログアウトする
-            </button>
-            <button
-              onClick={handleCancelLogout}
-              className="text-[#FF0000] font-bold text-[15px] cursor-pointer"
-            >
-              キャンセル
-            </button>
           </div>
         </div>
       )}

@@ -33,8 +33,8 @@ export default function Sidebar() {
         </Link>
         <div className="hidden md:flex w-full gap-[30px] justify-end">
           <div className="flex gap-[10px] items-center text-[16px] font-bold leading-[24px]">
-            <Link href="/login">Web3 割について</Link>|
-            <Link href="/login">店舗無料掲載希望</Link>
+            <Link href="/about">Web3 割について</Link>|
+            <Link href="/shop">店舗無料掲載希望</Link>
           </div>
           <div className="flex gap-[30px]">
             <Link

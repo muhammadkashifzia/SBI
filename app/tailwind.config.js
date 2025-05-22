@@ -16,8 +16,7 @@ export default {
     extend: {
       fontFamily: {
         noto: ['"Noto Sans JP"', 'sans-serif'],
-        modak: ['Modak', 'cursive'],
-        fugaz: ['"Fugaz One"', 'cursive'],
+  
       },
     },
   },
