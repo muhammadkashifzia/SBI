@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Modak&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Fugaz+One&family=Modak&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+  --background: #faf8f4;
+  --foreground: #1e1c1c;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto), sans-serif;
+}
+
+.custom-checkbox {
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  /* rounded */
+  border: 3px solid #EEEEEE;
+  /* gray-300 */
+  background-color: #f6f6f6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #b900b3;
+  border-color: #b900b3;
+}
+
+.custom-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #b900b3;
+}
+
+.custom-checkbox:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Optional: Add a checkmark */
+.custom-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 8px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.magazine-detail {
+  margin-top: 80px;
+}
+.magazine-detail h2 {
+  color: #1e1c1c;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+.magazine-detail p {
+  color: #1e1c1c;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+.magazine-detail img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  margin-bottom: 32px;
+}
+.slider-card .swiper-button-prev,
+.slider-card .swiper-button-next {
+  background-color: #000;
+  padding: 0px;
+  height: 35px;
+}
+.slider-card .swiper-button-prev {
+  margin-left: -8px;
+}
+.slider-card .swiper-button-next {
+  margin-right: -8px;
+}
+.slider-card .swiper-slide {
+  padding: 0px;
+}
+.slider-card .swiper-button-prev:after,
+.slider-card .swiper-button-next:after {
+  color: #fff;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .magazine-detail img {
+    height: auto;
+  }
+}
+
+/* Custom font classes */
+.font-noto {
+  font-family: var(--font-noto), sans-serif;
+}
+
+.font-modak {
+  font-family: var(--font-modak), cursive;
+}
+
+.font-fugaz {
+  font-family: var(--font-fugaz), cursive;
+}
