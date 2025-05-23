@@ -108,7 +108,7 @@ export default function About() {
         <h1 className="text-[24px] md:text-[28px] font-semibold mb-[20px] md:mb-[31px] text-center">
           ３ステップで集客開始
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
             <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
