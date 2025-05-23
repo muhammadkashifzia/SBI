@@ -273,7 +273,7 @@ export default function About() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-between h-full pl-[64px] pr-[60px] flex-col md:flex-row">
+      <div className="relative z-10 flex items-center justify-between gap-y-[40px] md:gap-y-[0px] h-full pl-[37px] md:pl-[64px] pr-[37px] md:pr-[60px] flex-col md:flex-row">
         <div className="text-white">
           <h3 className="text-[30px] leading-[38px] font-bold mb-[10px]">無料で店舗登録</h3>
           <p className="text-[16px] font-normal leading-[24px]">最短３分</p>
@@ -430,7 +430,7 @@ export default function About() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-between h-full pl-[64px] pr-[60px] flex-col md:flex-row">
+      <div className="relative z-10 flex items-center gap-y-[40px] md:gap-y-[0px] justify-between h-full pl-[37.5px] md:pl-[64px] pr-[37.5px] md:pr-[60px] flex-col md:flex-row">
         <div className="text-white">
           <h3 className="text-[30px] leading-[38px] font-bold mb-[10px]">無料で店舗登録</h3>
           <p className="text-[16px] font-normal leading-[24px]">最短３分</p>
