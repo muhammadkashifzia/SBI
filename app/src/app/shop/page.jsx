@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function About() {
   return (
-    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px] mt-[19.5px]">
+    <div className="container mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px]">
       <div>
         <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[19.5px] text-[#2C3237]">
           店舗向け使用方法
@@ -331,7 +331,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-[100px]">
+      <div className="mt-[40px] md:mt-[100px]">
         <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
@@ -362,7 +362,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px] mt-[20px] md:mt-0">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -388,7 +388,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-[100px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-[20px]  md:my-[100px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -417,7 +417,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="relative w-full  overflow-hidden py-[97px] rounded-[5px]">
+      <div className="relative w-full  overflow-hidden py-[97px] rounded-[5px] mt-[20px] md:mt-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
