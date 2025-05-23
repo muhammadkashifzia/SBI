@@ -2,15 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 export default function About() {
   return (
-    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px] mt-[20px]">
+    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px] mt-[19.5px]">
       <div>
-        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[20px]">
+        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[19.5px] text-[#2C3237]">
           店舗向け使用方法
         </h1>
       </div>
-      <div className="mt-[20px]">
+      <div className="mt-0 md:mt-[20px]">
         <div className="overflow-hidden">
-          <div className="flex md:space-x-6 md:flex-row flex-col-reverse mb-[20px] md:mb-[30px]">
+          <div className="flex md:space-x-6 md:flex-row flex-col-reverse mb-[0px] md:mb-[30px]">
             <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
               <div className="flex gap-[30px]">
                 <div>
@@ -20,7 +20,7 @@ export default function About() {
                   <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     使用料は無料でリスク無く送客が受けられる
                   </h3>
-                  <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
+                  <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal mb-0">
                     使用料は無料でリスクなく送客を受ける事が可能です。
                     <br />
                     実際に送客があり御社で設定した使用条件を満たした場合にのみ、
@@ -32,27 +32,27 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 w-full md:max-w-[484px]">
+            <div className="flex-1 w-full md:max-w-[484px] mt-[0px]">
               <img
                 src="/assets/images/store-image.png"
                 alt="NFT"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-cover rounded-[5px]"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-[100px]">
+      <div className="mt-[0px] md:mt-[100px]">
         <div className="overflow-hidden">
-          <div className="flex md:space-x-6 md:flex-row flex-col-reverse mb-[20px] md:mb-[30px]">
-            <div className="flex-1 w-full md:max-w-[484px]">
+          <div className="flex md:space-x-6 md:flex-row flex-col mb-[40px] md:mb-[30px]">
+            <div className="flex-1 w-full md:max-w-[484px] mt-[40px] md:mt-0">
               <img
                 src="/assets/images/store-image02.jpg"
                 alt="NFT"
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
-            <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
+            <div className="flex-1 space-y-0 md:space-y-4  mt-[15px] md:mt-0 m-x-0">
               <div className="flex gap-[30px]">
                 <div>
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
@@ -72,10 +72,10 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-[100px]">
+      <div className="mt-[0px] md:mt-[100px]">
         <div className="overflow-hidden">
           <div className="flex md:space-x-6 md:flex-row flex-col-reverse">
-            <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
+            <div className="flex-1 space-y-0 md:space-y-4  mt-[15px] md:mt-0 m-x-0">
               <div className="flex gap-[30px]">
                 <div>
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
@@ -104,11 +104,11 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-[131px]">
-        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[31px] text-center">
+      <div className="mt-[78px] md:mt-[131px]">
+        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[20px] md:mb-[31px] text-center">
           ３ステップで集客開始
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[34px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
             <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
@@ -153,8 +153,8 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="mt-[100px]">
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px]">
+      <div className="mt-[20px] md:mt-[100px] ">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px] mb-[20px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -220,7 +220,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="py-[100px]">
+        <div className="py-[20px] md:py-[100px]">
           <p>
             弊社で印刷を行い、ポップスタンド付きで送付させて頂く事も可能です。(有料)
           </p>
@@ -228,7 +228,7 @@ export default function About() {
             「綺麗に印刷したい」「ポップスタンドの用意が面倒」などございましたら、こちらのリンクより注意事項をお読みの上お申込みください。
           </p>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-[100px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-0 md:my-[100px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -260,7 +260,7 @@ export default function About() {
         </div>
       </div>
 
-       <div className="relative w-full  overflow-hidden py-[97px] rounded-[5px]">
+       <div className="relative w-full  overflow-hidden py-[97px] rounded-[5px] mt-[40px] md:mt-0">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -287,8 +287,8 @@ export default function About() {
      </div>
       </div>
     </div>
-      <div className="mt-[100px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[34px]">
+      <div className="mt-[40px] md:mt-[100px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
             <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
