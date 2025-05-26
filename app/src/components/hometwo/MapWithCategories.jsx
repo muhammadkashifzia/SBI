@@ -46,15 +46,18 @@ const regions = [
 
 export default function MapWithCategories() {
   return (
-    <div className="relative max-w-[1360px] mx-auto h-[906px]">
+       <div className='max-w-[1360px] mx-auto'>
+          <h2 className='font-bold text-[32px] leading-normal mb-[20px]'>地図検索</h2>
+    <div className="relative  h-[906px] bg-[#f7f7f7] pb-[18px]">
+    
       {/* Map image */}
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center">
         <Image
           src={mapImage}
           alt="Japan Map"
           width={900}
           height={600}
-          className="w-[900px] h-[906px] object-fill"
+          className="w-[900px] h-full object-fill"
         />
       </div>
 
@@ -68,22 +71,22 @@ export default function MapWithCategories() {
           </h3>
           <ul className="text-[12px] md:text-sm py-[15px] flex flex-wrap justify-center gap-[15px] px-[5px] md:px-[30px]">
             <li>新潟</li>
-             <span>|</span>
+            <span>|</span>
             <li>富山</li>
             <li>福井</li>
-             <span>|</span>
+            <span>|</span>
             <li>山梨</li>
             <li>長野</li>
-             <span>|</span>
+            <span>|</span>
             <li>岐阜</li>
             <li>静岡</li>
-             <span>|</span>
+            <span>|</span>
             <li>愛知</li>
           </ul>
         </div>
       </div>
-      
-      <div className="absolute bottom-[43%] md:bottom-[35%] left-[40%] md:left-[50%] transform translate-x-[-50%] right-0  h-[fit-content]">
+
+      <div className="absolute bottom-[43%] md:bottom-[45%] left-[40%] md:left-[35%] transform translate-x-[-50%] right-0  h-[fit-content] w-[max-content]">
         <div
           className={`text-center bg-white text-[#2C3237] rounded-lg shadow-lg max-w-[100px] md:max-w-[173px]`}
         >
@@ -92,16 +95,16 @@ export default function MapWithCategories() {
           </h3>
           <ul className="text-[12px] md:text-sm py-[15px] flex flex-wrap justify-center gap-[15px] px-[5px] md:px-[30px]">
             <li>福岡</li>
-             <span>|</span>
+            <span>|</span>
             <li>福岡</li>
             <li>福岡</li>
-             <span>|</span>
+            <span>|</span>
             <li>福岡</li>
             <li>福岡</li>
           </ul>
         </div>
       </div>
-      <div className="absolute bottom-[10%] md:bottom-[5%] left-[25%] md:left-[35%] transform translate-x-[-30%] right-0  h-[fit-content]">
+      <div className="absolute bottom-[0%] md:bottom-[15%] left-[25%] md:left-[18%] transform translate-x-[-30%] right-0  h-[fit-content] w-[max-content]">
         <div
           className={`text-center bg-white text-[#2C3237] rounded-lg shadow-lg max-w-[100px] md:max-w-[173px]`}
         >
@@ -124,7 +127,7 @@ export default function MapWithCategories() {
           </ul>
         </div>
       </div>
-       <div className="absolute bottom-[40%] md:bottom-[49%] -right-9 md:right-[10%] transform translate-x-[-30%]  h-[fit-content]">
+      <div className="absolute bottom-[40%] md:bottom-[49%] -right-9 md:right-[10%] transform translate-x-[-30%]  h-[fit-content]">
         <div
           className={`text-center bg-white text-[#2C3237] rounded-lg shadow-lg max-w-[100px] md:max-w-[173px]`}
         >
@@ -141,7 +144,6 @@ export default function MapWithCategories() {
             <li>福島</li>
             <span>|</span>
             <li>奈良</li>
-       
           </ul>
         </div>
       </div>
@@ -166,7 +168,7 @@ export default function MapWithCategories() {
           </ul>
         </div>
       </div>
-      <div className="absolute bottom-[4%] right-[30%] md:right-[28%] transform translate-x-[-30%]  h-[fit-content]">
+      <div className="absolute bottom-[12%] right-[30%] md:right-[28%] transform translate-x-[-30%]  h-[fit-content]">
         <div
           className={`text-center bg-white text-[#2C3237] rounded-lg shadow-lg max-w-[100px] md:max-w-[173px]`}
         >
@@ -187,7 +189,7 @@ export default function MapWithCategories() {
           </ul>
         </div>
       </div>
-      <div className="absolute bottom-[0%] right-10 md:right-[44%] transform translate-x-[-30%]  h-[fit-content]">
+      <div className="absolute bottom-[10%] right-10 md:right-[44%] transform translate-x-[-30%]  h-[fit-content]">
         <div
           className={`text-center bg-white text-[#2C3237] rounded-lg shadow-lg max-w-[100px] md:max-w-[173px]`}
         >
@@ -196,14 +198,15 @@ export default function MapWithCategories() {
           </h3>
           <ul className="text-[12px] md:text-sm py-[15px] flex flex-wrap justify-center gap-[5px] md:gap-[15px] px-[0px] md:px-[30px]">
             <li>愛媛</li>
-             <span>|</span>
+            <span>|</span>
             <li>香川</li>
             <li>高知</li>
-             <span>|</span>
+            <span>|</span>
             <li>徳島</li>
           </ul>
         </div>
       </div>
     </div>
+       </div>
   );
 }
