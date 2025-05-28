@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function BrowseCategory() {
   return (
-    <div className="max-w-[1360px] mx-auto mt-[100px]">
+    <div className="mt-[100px]">
       <div className="text-left mb-[23px]">
         <h1 className="text-[32px] font-bold text-[#2C3237]">
           カテゴリから探す
@@ -75,8 +75,8 @@ export default function BrowseCategory() {
           </span>
         </div>
       </div>
-      <div className="flex gap-[161px] mt-[20px] items-center">
-        <div>グルメ</div>
+      <div className="flex gap-x-[161px] gap-y-[10px] mt-[20px] items-start md:items-center flex-col md:flex-row">
+        <div className='flex w-[85px] text-[20px] font-bold'>グルメ</div>
         <div className='flex items-center gap-[20px] flex-wrap'>
           <p className="border border-[#CBCBCB] rounded-[3px] px-[20px] text-[18px] font-medium text-[#006BA6] h-[33px] items-center justify-center flex py-[10px]">
             焼き肉

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import mapImage from '../../../public/assets/svg/map.svg'; // Ensure the map image is in the public folder
 
 const regions = [
   {
@@ -46,18 +45,25 @@ const regions = [
 
 export default function MapWithCategories() {
   return (
-       <div className='max-w-[1360px] mx-auto'>
+       <div>
           <h2 className='font-bold text-[32px] leading-normal mb-[20px]'>地図検索</h2>
-    <div className="relative  h-[906px] bg-[#f7f7f7] pb-[18px]">
+    <div className="relative pt-[17px] pb-[108px] pl-[15px] pr-[35px] md:h-[906px] bg-[#f7f7f7]">
     
       {/* Map image */}
       <div className="flex justify-center">
         <Image
-          src={mapImage}
+          src="/assets/svg/map.svg"
           alt="Japan Map"
           width={900}
           height={600}
-          className="w-[900px] h-full object-fill"
+          className="w-[900px] h-full object-fill hidden md:block"
+        />
+        <Image
+          src="/assets/svg/mbl-map.svg"
+          alt="Japan Map"
+          width={900}
+          height={600}
+          className="w-full h-full object-fill block md:hidden"
         />
       </div>
 

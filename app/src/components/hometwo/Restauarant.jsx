@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import RestaurantCard from '@/components/restaurant/RestaurantCard';
+import RestaurantCard from '@/components/restaurant/restaurantCard';
 
 export default function Home() {
   const categories = ['グルメ', 'ファッション', 'グッズ', 'アミューズメント', 'サービス'];
@@ -18,7 +18,7 @@ export default function Home() {
     {
       id: 2,
       name: 'レストランB',
-      image: '/assets/images/restaurant.png',
+      image: '/assets/images/restaurant02.png',
       rating: '5.00 (20)',
       area: 'エリア名',
       category: 'グルメ',
@@ -26,7 +26,7 @@ export default function Home() {
     {
       id: 3,
       name: 'レストランC',
-      image: '/assets/images/restaurant.png',
+      image: '/assets/images/restaurant03.png',
       rating: '5.00 (25)',
       area: 'エリア名',
       category: 'グルメ',
@@ -35,7 +35,7 @@ export default function Home() {
       id: 4,
       name: 'レストランA',
       image: '/assets/images/restaurant.png',
-      rating: '5.00 (30)',
+      rating: '1.00 (30)',
       area: 'エリア名',
       category: 'グルメ',
     },
@@ -51,7 +51,7 @@ export default function Home() {
       id: 6,
       name: 'レストランC',
       image: '/assets/images/restaurant.png',
-      rating: '5.00 (25)',
+      rating: '2.00 (25)',
       area: 'エリア名',
       category: 'グルメ',
     },
@@ -71,16 +71,18 @@ export default function Home() {
   );
 
   return (
-    <div className='max-w-[1360px] mx-auto mt-[100px]'>
-      <div className='flex justify-end mb-[20px]'>
-        <div className='flex justify-between w-full'>
-          <h2 className='text-[32px] font-bold'>レビュー高評価</h2>
-       <div className='flex space-x-[26px]'>
+    <div className='mt-[89px] md:mt-[100px]'>
+          <h2 className='text-[32px] font-bold mb-[15px] flex md:hidden'>レビュー高評価</h2>
+      <div className='flex justify-start md:justify-end mb-[20px]'>
+          
+        <div className='flex flex-col md:flex-row justify-between w-full overflow-x-auto'>
+          <h2 className='text-[32px] font-bold mb-[15px] hidden md:flex'>レビュー高評価</h2>
+       <div className='inline-flex space-x-[26px] w-[max-content]'>
            {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`text-[20px] font-bold cursor-pointer ${
+              className={`text-[20px] font-bold cursor-pointer  ${
                 selectedCategory === cat
                   ? 'text-[#006BA6] border-b-2 border-[#006BA6]'
                   : 'text-[#9E9E9E] hover:text-[#006BA6]'
@@ -93,7 +95,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-[34px]'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[34px]'>
         {filteredRestaurants.map((restaurant) => (
           <RestaurantCard key={restaurant.id} restaurant={restaurant} />
         ))}

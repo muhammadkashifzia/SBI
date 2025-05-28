@@ -20,7 +20,7 @@ export default function Sidebar() {
   if (!mounted) return null;
 
   return (
-    <div className="relative z-10 bg-[#FAF8F4]">
+    <div className="relative z-10 bg-white">
       <header className="md:container mx-auto  py-[16px] md:py-[12px] flex items-center justify-start md:justify-between px-4 relative">
         <Link href="/" className="flex-shrink-0">
           <Image

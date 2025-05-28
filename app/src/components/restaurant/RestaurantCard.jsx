@@ -1,19 +1,51 @@
-import Image from "next/image";
+import React from 'react';
+import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
+import Image from 'next/image';
 const RestaurantCard = ({ restaurant }) => {
+  const ratingNumber = parseFloat(restaurant.rating.split(' ')[0]);
+  const reviewsCount = restaurant.rating.match(/\((\d+)\)/)?.[1];
+
+  const renderStars = () => {
+    const fullStars = Math.floor(ratingNumber);
+    const hasHalfStar = ratingNumber - fullStars >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    return (
+      <>
+        {[...Array(fullStars)].map((_, i) => (
+          <FaStar key={`full-${i}`} className="text-yellow-500 inline-block mr-1" />
+        ))}
+        {hasHalfStar && <FaStarHalfAlt className="text-yellow-500 inline-block mr-1" />}
+        {[...Array(emptyStars)].map((_, i) => (
+          <FaRegStar key={`empty-${i}`} className="text-yellow-500 inline-block mr-1" />
+        ))}
+      </>
+    );
+  };
+
   return (
-    <div className="max-w-sm rounded overflow-hidden">
-      <div className="relative mb-[15px]">
-      <Image className="w-full h-[248px] object-cover object-top" src={restaurant.image} alt={restaurant.name} width={200} height={200}/>
-       <span className="inline-flex gap-[10px] text-white bg-[#9F8C5B] text-sm px-2 py-[11px] rounded-full absolute bottom-[11px] left-[12px] h-[42px] text-[16px] font-bold w-[120px] justify-center items-center">
+    <div>
+      <div className="relative">
+        <img
+          src={restaurant.image}
+          alt={restaurant.name}
+          className="w-full h-[200px] object-cover rounded-[5px] mb-[15px]"
+        />
+        <span className="inline-flex gap-[10px] text-white bg-[#9F8C5B] text-sm px-2 py-[11px] rounded-full absolute bottom-[11px] left-[12px] h-[42px] text-[16px] font-bold w-[120px] justify-center items-center">
           <Image src='/assets/svg/location-icon.svg' width={14} height={20} alt="locationIcon"/> {restaurant.area}
         </span>
+      </div>
+      <div>
+        <h3 className="text-[22px] font-bold mb-[14px] text-[#2C3237]">{restaurant.name}</h3>
+        <div className="flex items-center gap-[5px]">
+         <div>{renderStars()}</div>
+          <span className="text-gray-700 text-sm">
+            {ratingNumber.toFixed(2)} ({reviewsCount})
+          </span>
         </div>
-      <div className="">
-        <div className="font-extrabold text-[22px] mb-[14px] text-[#2C3237]">{restaurant.name}</div>
-        <p className="text-gray-700 text-base">{restaurant.rating}</p>
       </div>
     </div>
   );
-}
+};
 
 export default RestaurantCard;
