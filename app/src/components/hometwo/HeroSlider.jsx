@@ -66,7 +66,7 @@ export default function HeroSlider() {
         </div>
         <div className="flex items-center w-full flex-1 border-0 px-3 py-[10px] gap-[20px] border-b-1 md:border-b-0 border-[#BEBEBE]">
           <span className="text-yellow-500">
-            <Image src="/assets/svg/star-icon.svg" width={31} height={32} />
+            <Image src="/assets/svg/star-icon.svg" width={31} height={32} alt='starIcon'/>
           </span>
           <input
             type="text"
