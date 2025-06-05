@@ -9,7 +9,7 @@ export default function About() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[243px]  bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-01.png"
                 alt="NFT"
@@ -22,7 +22,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-02.png"
                 alt="Shopping"
@@ -35,7 +35,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
+            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
               <img
                 src="/assets/images/instructor-image-03.png"
                 alt="Purchase"
@@ -51,7 +51,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-04.png"
                 alt="QR Code"
@@ -67,7 +67,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-05.png"
                 alt="Verification"
@@ -81,7 +81,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-48 bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-06.png"
                 alt="Receipt"

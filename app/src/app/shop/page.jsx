@@ -32,7 +32,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 w-full md:max-w-[484px] mt-[0px]">
+            <div className="flex-1 w-full md:max-w-[599px] mt-[0px]">
               <img
                 src="/assets/images/store-image.png"
                 alt="NFT"
@@ -45,7 +45,7 @@ export default function About() {
       <div className="mt-[0px] md:mt-[100px]">
         <div className="overflow-hidden">
           <div className="flex md:space-x-6 md:flex-row flex-col mb-[40px] md:mb-[30px]">
-            <div className="flex-1 w-full md:max-w-[484px] mt-[40px] md:mt-0">
+            <div className="flex-1 w-full md:max-w-[599px] mt-[40px] md:mt-0">
               <img
                 src="/assets/images/store-image02.jpg"
                 alt="NFT"
@@ -94,9 +94,9 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 w-full md:max-w-[484px]">
+            <div className="flex-1 w-full md:max-w-[599px]">
               <img
-                src="/assets/images/store-image03.jpg"
+                src="/assets/images/store-image03.png"
                 alt="NFT"
                 className="w-full h-full object-cover rounded-lg"
               />
