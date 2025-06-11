@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function CtaBannerComponent() {
   return (
   <div
         className="h-full mt-[4px] rounded-[5px] bg-cover bg-no-repeat bg-center relative  overflow-hidden  flex flex-col justify-center py-[103px] md:py-[100px] w-full max-w-[1359px] mx-auto px-[16px]"
