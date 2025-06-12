@@ -253,7 +253,7 @@ export default function About() {
           </div>
           <div className="flex-1 w-full md:max-w-[599.2px]">
             <img
-              src="/assets/images/check-image.jpg"
+              src="/assets/images/check-image.png"
               alt="NFT"
               className="w-full h-full object-cover rounded-lg"
             />

@@ -8,7 +8,7 @@ export default function BannerTwo() {
     <>
       {/* Banner */}
       <div
-        className="h-full min-h-[356px] md:min-h-[690px] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center text-white relative py-[57px]  md:py-[221px] "
+        className="h-full min-h-[356px] md:min-h-[690px] bg-cover bg-no-repeat bg-top flex flex-col justify-center items-center text-white relative py-[57px]  md:py-[221px] "
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), url('/assets/images/bannerthree.png')`,
           backgroundColor: 'lightgray',

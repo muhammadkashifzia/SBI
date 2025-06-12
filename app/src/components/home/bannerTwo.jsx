@@ -15,7 +15,6 @@ export default function BannerTwo() {
         }}
       >
         <div className="w-full max-w-[100%] md:max-w-[752px] mx-auto px-[16px]">
-          {/* Title  */}
           <div className="text-center mb-6">
             <div className="mb-[36px] md:mb-[30px]">
               <p className="font-[700] text-[24px] md:text-[50px] mb-[38px] leading-[38px]">
