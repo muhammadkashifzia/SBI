@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import RestaurantGallery from '@/components/restaurant/restaurantGellery'
 import RecommendedProducts from '@/components/restaurant/recommendedProducts'
-import ShopInfo from '@/components/restaurant/ShopInfo'
+import ShopInfo from '@/components/restaurant/shopInfo'
 import CopounCard from '@/components/restaurant/copounCard'
 import ReviewList from '@/components/restaurant/reviewList';
 export default function RestaurantListing() {
