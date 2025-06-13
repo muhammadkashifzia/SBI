@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import UseInStoresComponent from "@/components/stores/instructionStores"
+import CustomerStepsComponent from "@/components/stores/customersSteps"
+import RegisterBannerComponent from "@/components/stores/registerBanner"
 export default function About() {
   return (
-   <div>
-     <div className="container mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px]">
+    <div className="container mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px]">
     <UseInStoresComponent />
     <CustomerStepsComponent />
       <div className="mt-[20px] md:mt-[100px] ">
@@ -126,19 +128,7 @@ export default function About() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-between gap-y-[40px] md:gap-y-[0px] h-full pl-[37px] md:pl-[64px] pr-[37px] md:pr-[60px] flex-col md:flex-row">
-        <div className="text-white">
-          <h3 className="text-[30px] leading-[38px] font-bold mb-[10px]">無料で店舗登録</h3>
-          <p className="text-[16px] font-normal leading-[24px]">最短３分</p>
-        </div>
-
-     <div>
-         <button className="mb-[10px] bg-white text-blue-900 font-semibold px-4 py-2 rounded shadow hover:bg-gray-100 transition">
-        店舗を掲載して集客スタート
-        </button>
-        <p className='text-white text-center'>即日反映されます</p>
-     </div>
-      </div>
+     <RegisterBannerComponent />
     </div>
       <div className="mt-[40px] md:mt-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
@@ -263,7 +253,7 @@ export default function About() {
           </div>
           <div className="flex-1 w-full md:max-w-[599.2px]">
             <img
-              src="/assets/images/check-image.jpg"
+              src="/assets/images/check-image.png"
               alt="NFT"
               className="w-full h-full object-cover rounded-lg"
             />
@@ -282,23 +272,9 @@ export default function About() {
         <div className="absolute inset-0 bg-[#00519ec7] bg-opacity-50" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 flex items-center gap-y-[40px] md:gap-y-[0px] justify-between h-full pl-[37.5px] md:pl-[64px] pr-[37.5px] md:pr-[60px] flex-col md:flex-row">
-        <div className="text-white">
-          <h3 className="text-[30px] leading-[38px] font-bold mb-[10px]">無料で店舗登録</h3>
-          <p className="text-[16px] font-normal leading-[24px]">最短３分</p>
-        </div>
-
-     <div>
-         <button className="mb-[10px] bg-white text-blue-900 font-semibold px-4 py-2 rounded shadow hover:bg-gray-100 transition">
-         店舗を掲載して集客スタート
-        </button>
-        <p className='text-white text-center'>即日反映されます</p>
-     </div>
-      </div>
+      <RegisterBannerComponent />
     </div>
     
     </div>
-   </div>
   );
 }
