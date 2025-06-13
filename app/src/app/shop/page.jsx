@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function About() {
   return (
+<<<<<<< Updated upstream
     <div className="container mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px]">
       <div>
         <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[19.5px] text-[#2C3237]">
@@ -153,6 +154,12 @@ export default function About() {
           </div>
         </div>
       </div>
+=======
+   <div>
+     <div className="container mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px]">
+    <UseInStoresComponent />
+    <CustomerStepsComponent />
+>>>>>>> Stashed changes
       <div className="mt-[20px] md:mt-[100px] ">
         <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px] mb-[20px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
@@ -446,5 +453,6 @@ export default function About() {
     </div>
     
     </div>
+   </div>
   );
 }
