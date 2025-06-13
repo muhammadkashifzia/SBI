@@ -1,9 +1,11 @@
 export default function UseInStoresComponent() {
   return (
     <div>
-      <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[19.5px] text-[#2C3237]">
+      <div>
+        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[19.5px] text-[#2C3237]">
           店舗向け使用方法
         </h1>
+      </div>
       <div className="mt-0 md:mt-[20px]">
         <div className="overflow-hidden">
           <div className="flex md:space-x-6 md:flex-row flex-col-reverse mb-[0px] md:mb-[30px]">

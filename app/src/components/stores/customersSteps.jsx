@@ -35,7 +35,7 @@ export default function CustomerStepsComponent() {
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
             <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
               <img
-                src="/assets/images/customer-image04.png"
+                src="/assets/images/customer-image03.png"
                 alt="Purchase"
                 className="w-full h-full rounded-t-[5px] object-cover object-top"
               />
