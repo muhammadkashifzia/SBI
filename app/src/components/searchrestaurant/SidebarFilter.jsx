@@ -65,7 +65,7 @@ export default function SidebarFilter() {
   };
 
   return (
-    <aside className="w-[415px] p-[15px] border border-[#DCDCDC] rounded-[5px] bg-[#FAFAFA]">
+    <aside className="w-[100%] p-[15px] border border-[#DCDCDC] rounded-[5px] bg-[#FAFAFA]">
       <div className="flex gap-[10px] items-center mb-[20px]">
         <Image
           src="/assets/svg/filter-icon.svg"
@@ -104,7 +104,7 @@ export default function SidebarFilter() {
           {categories.map((category) => (
             <li key={category.name}>
               <label className="inline-flex items-center gap-2 font-medium">
-                <input type="checkbox" className="w-[20px] h-[20px]" />
+                <input type="checkbox" className="w-[20px] h-[20px] accent-[#006BA6]"  />
                <span className='font-medium text-[18px] text-[#2C3237]'> {category.name}</span> <span className='font-medium text-[18px] text-[#2C3237]'>({category.count})</span>
               </label>
               {category.subcategories.length > 0 && (
@@ -112,7 +112,7 @@ export default function SidebarFilter() {
                   {category.subcategories.map((sub) => (
                     <li key={sub.name}>
                       <label className="inline-flex items-center gap-2">
-                        <input type="checkbox" className="w-[20px] h-[20px]" />
+                        <input type="checkbox" className="w-[20px] h-[20px] accent-[#006BA6]" />
                         <div className="flex items-center gap-2">
                           <span className="inline-block border border-[#CBCBCB] text-[#006BA6] bg-white text-[18px] font-medium px-[12px] py-[2px] rounded-[3px]">
                             {sub.name}
@@ -150,7 +150,7 @@ export default function SidebarFilter() {
               </option>
             ))}
           </select>
-          <div className="cursor-pointer  top-[50%] transform -translate-y-1/2   absolute inset-y-0 right-[5.64px] flex items-center px-2 text-gray-700 bg-white shadow w-[41px] h-[41px] justify-center">
+          <div className="pointer-events-none top-[50%] transform -translate-y-1/2   absolute inset-y-0 right-[5.64px] flex items-center px-2 text-gray-700 bg-white shadow w-[41px] h-[41px] justify-center">
             <svg
               width="12"
               height="8"
@@ -189,7 +189,7 @@ export default function SidebarFilter() {
           {['エリア1', 'エリア2', 'エリア3', 'エリア4'].map((area) => (
             <li key={area}>
               <label className="inline-flex items-center gap-[10px] text-[13px]">
-                <input type="checkbox" className="w-[20px] h-[20px]" />
+                <input type="checkbox" className="w-[20px] h-[20px] !accent-[#006BA6]" />
                 <span className="text-[#006BA6] border border-[#CBCBCB] rounded-[3px] text-[18px] font-medium px-[20px] py-[2px]">
                   {area}
                 </span>
@@ -213,7 +213,7 @@ export default function SidebarFilter() {
                 </option>
               ))}
             </select>
-            <div className="cursor-pointer  top-[50%] transform -translate-y-1/2   absolute inset-y-0 right-[5.64px] flex items-center px-2 text-gray-700 bg-white shadow w-[41px] h-[41px] justify-center">
+            <div className="pointer-events-none  top-[50%] transform -translate-y-1/2   absolute inset-y-0 right-[5.64px] flex items-center px-2 text-gray-700 bg-white shadow w-[41px] h-[41px] justify-center">
               <svg
                 width="12"
                 height="8"
@@ -239,7 +239,7 @@ export default function SidebarFilter() {
                 </option>
               ))}
             </select>
-            <div className="cursor-pointer  top-[50%] transform -translate-y-1/2 z-20 absolute inset-y-0 right-[5.64px] flex items-center px-2 text-gray-700 bg-white shadow w-[41px] h-[41px] justify-center">
+            <div className="pointer-events-none  top-[50%] transform -translate-y-1/2  absolute inset-y-0 right-[5.64px] flex items-center px-2 text-gray-700 bg-white shadow w-[41px] h-[41px] justify-center">
               <svg
                 width="12"
                 height="8"

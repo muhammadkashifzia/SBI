@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Link from 'next/link';
 const AreaList = () => {
   const categories = [
     {
@@ -83,12 +83,13 @@ const AreaList = () => {
           </h2>
           <div className="flex gap-[20px] flex-wrap w-full md:w-[85%]">
             {category.items.map((item, idx) => (
-              <button
+              <Link
                 key={idx}
+                href="/restaurants"
                 className="cursor-pointer text-[#006BA6] hover:underline border border-[#CBCBCB] rounded-[3px] text-[18px] font-medium px-[5px]  h-[33px] "
               >
                 {item}
-              </button>
+              </Link>
             ))}
           </div>
         </div>
