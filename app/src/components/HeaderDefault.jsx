@@ -4,11 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import MobileSidebar from '@/components/MobileSidebar';
 import SignInModal from "@/components/auth/SignInModal";
+import AnnouncementModal  from "@/components/notice/noticeModal";
 
 export default function Sidebar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+   const [showModal, setShowModal] = useState(false);
   const user = {
     name: '田中 太郎',
     avatar: '/assets/images/profile-images.png',
@@ -53,13 +55,13 @@ export default function Sidebar() {
           </div>
         </div>
         <div className="ml-[18px] hidden md:flex">
-          <Link
-            href="/register"
+          <button
+                onClick={() => setShowModal(true)}
             className="relative bg-[#006BA6] text-[#ffffff] px-3 py-[12px] rounded-[4px] flex items-center  cursor-pointer max-w-full w-[36px] h-[36px]"
           >
             <Image src="/assets/svg/bell-icon.svg" width={16} height={18} alt='bellIon'/>
             <span className='inline-block w-[7px] h-[7px] bg-[#FF0000] rounded-full absolute top-[8px] left-[19px]'></span>
-          </Link>
+          </button>
         </div>
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -89,6 +91,7 @@ export default function Sidebar() {
         user={user}
       />
         <SignInModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+     <AnnouncementModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </div>
   );
 }
