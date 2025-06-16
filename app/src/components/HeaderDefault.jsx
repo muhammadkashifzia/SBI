@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import MobileSidebar from '@/components/MobileSidebar';
+import SignInModal from "@/components/auth/SignInModal";
 
 export default function Sidebar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-
+  const [isModalOpen, setIsModalOpen] = useState(true);
   const user = {
     name: '田中 太郎',
     avatar: '/assets/images/profile-images.png',
@@ -37,12 +38,12 @@ export default function Sidebar() {
             <Link href="/shop">店舗無料掲載希望</Link>
           </div>
           <div className="flex gap-[30px]">
-            <Link
-              href="/login"
+            <button
+               onClick={() => setIsModalOpen(true)}
               className="break-keep bg-[#006BA6] text-[#ffffff] px-3 py-[12px] rounded-[5px] flex items-center gap-[4px] justify-center cursor-pointer text-[16px] font-bold leading-[24px] max-w-[177px] w-full h-[36px]"
             >
               ユーザー向けログイン
-            </Link>
+            </button>
             <Link
               href="/register"
               className="bg-[#006BA6] text-[#ffffff] px-3 py-[12px] rounded-[5px] flex items-center gap-[4px] justify-center cursor-pointer text-[16px] font-bold leading-[24px] max-w-[177px] w-full h-[36px]"
@@ -87,6 +88,7 @@ export default function Sidebar() {
         setSidebarOpen={setSidebarOpen}
         user={user}
       />
+        <SignInModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }

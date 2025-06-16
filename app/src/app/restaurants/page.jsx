@@ -5,7 +5,7 @@ import SidebarFilter from '@/components/searchrestaurant/SidebarFilter';
 export default function RestaurantListing() {
   return (
     <div>
-      <HeroSlider />
+      {/* <HeroSlider /> */}
       <div className="flex max-w-[1358px] mx-auto gap-x-[28px] px-[16px]">
         <div className="hidden md:block">
           <SidebarFilter />

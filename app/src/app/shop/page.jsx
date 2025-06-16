@@ -107,7 +107,7 @@ export default function About() {
           </div>
           <div className="flex-1 w-full md:max-w-[599.2px]">
             <img
-              src="/assets/images/customer-image03.png"
+              src="/assets/images/check-image.png"
               alt="NFT"
               className="w-full h-full object-cover rounded-lg"
             />
@@ -121,7 +121,7 @@ export default function About() {
         buttonLabel="店舗を掲載して集客スタート"
         note="即日反映されます"
         imageSrc="/assets/images/register-store-banner02.jpg"
-        linkUrl="/"
+        linkUrl="/restaurants"
       />
 
       <div className="mt-[40px] md:mt-[100px]">
@@ -254,25 +254,14 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="relative w-full  overflow-hidden py-[97px] rounded-[5px] mt-[20px] md:mt-0">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/assets/images/register-store-banner.jpg" // replace with your image path
-            alt="Coffee Background"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-[#00519ec7] bg-opacity-50" />
-        </div>
-
-        <RegisterBannerComponent
-          heading="あなたのお店を紹介しましょう"
-          subtext="登録は簡単・無料"
-          buttonLabel="今すぐ登録"
-          note="登録内容はすぐに反映されます"
-        />
-      </div>
+         <RegisterBannerComponent
+        heading="無料で店舗登録"
+        subtext="最短３分!"
+        buttonLabel="店舗を掲載して集客スタート"
+        note="即日反映されます"
+        imageSrc="/assets/images/register-store-banner02.jpg"
+        linkUrl="/restaurants"
+      />
     </div>
   );
 }

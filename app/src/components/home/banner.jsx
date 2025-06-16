@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-
-export default function Banner({ title1, title2, buttonText, backgroundImage }) {
+import Link from 'next/link';
+export default function Banner({ title1, title2, buttonText, backgroundImage, bannerLinkUrl }) {
   return (
     <div
       className="h-full min-h-[356px] md:min-h-[690px] bg-cover bg-no-repeat bg-center flex flex-col justify-center items-center text-white relative py-[57px] md:py-[221px]"
@@ -22,9 +22,9 @@ export default function Banner({ title1, title2, buttonText, backgroundImage }) 
           </div>
         </div>
 
-        <button className="bg-white text-[#006BA6] mt-[24px] rounded-[4px] border border-white w-full flex gap-[8px] items-center justify-center py-[16px] text-[16px] font-bold max-w-[295px] h-[52px] mx-auto cursor-pointer">
+        <Link  href={bannerLinkUrl || "#"} className="bg-white text-[#006BA6] mt-[24px] rounded-[4px] border border-white w-full flex gap-[8px] items-center justify-center py-[16px] text-[16px] font-bold max-w-[295px] h-[52px] mx-auto cursor-pointer">
           {buttonText}
-        </button>
+        </Link>
       </div>
     </div>
   );
