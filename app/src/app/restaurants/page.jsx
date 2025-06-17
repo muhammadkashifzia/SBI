@@ -1,5 +1,4 @@
 import React from 'react';
-import HeroSlider from '@/components/hometwo/HeroSlider';
 import ListingList from '@/components/searchrestaurant/ListingList';
 import SidebarFilter from '@/components/searchrestaurant/SidebarFilter';
 export default function RestaurantListing() {

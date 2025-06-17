@@ -8,13 +8,17 @@ import AreaList from '@/components/hometwo/AreaList';
 export default function About() {
   return (
     <div>
-      <HeroSlider />
-      <div className="max-w-[1360px] mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px] -z-10 relative">
-        <MapCategory />
+     <div>
+       <HeroSlider />
+     </div>
+      <div className="max-w-[1360px] mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px] ">
+       <div>
+         <MapCategory />
         <BrowseCategory />
         <Restaurant />
         <AreaGrid />
         <AreaList />
+       </div>
       </div>
     </div>
   );
