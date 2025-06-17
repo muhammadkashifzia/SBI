@@ -216,14 +216,14 @@ const HeroSlider = () => {
 
       {Object.entries(locationData).map(([regionKey, regionData]) => (
         <div key={regionKey} className="mb-4">
-          <h4 className="font-semibold text-gray-700 mb-2">
+          <h4 className="font-medium text-[#2C3237] text-[18px] mb-[15px]">
             {regionData.name}
           </h4>
 
           {regionKey === '北海道' ? (
             <button
               onClick={() => handleRegionSelect(regionKey)}
-              className="px-3 py-1 mr-2 mb-2 border border-blue-300 text-blue-600 rounded hover:bg-blue-50 transition-colors"
+              className="px-3 py-1 mr-2 mb-2 border border-[#CBCBCB] text-[#006BA6] rounded-[3px] hover:bg-blue-50 transition-colors cursor-pointer"
             >
               北海道
             </button>
@@ -233,7 +233,7 @@ const HeroSlider = () => {
                 <button
                   key={prefecture}
                   onClick={() => handleRegionSelect(regionKey)}
-                  className="px-3 py-1 border border-blue-300 text-blue-600 rounded hover:bg-blue-50 transition-colors"
+                  className="px-3 py-1 border border-[#CBCBCB] text-[#006BA6] rounded-[3px] hover:bg-blue-50 transition-colors cursor-pointer"
                 >
                   {prefecture}
                 </button>
@@ -247,21 +247,22 @@ const HeroSlider = () => {
 
   const renderPrefectureSelection = () => (
     <div className="p-4">
+        <h3 className="font-bold text-lg mb-4 text-gray-800">
+        都道府県を選択してください
+      </h3>
       <div className="flex items-center mb-4">
         <button
           onClick={() => setCurrentStep('region')}
-          className="text-blue-600 hover:text-blue-800 mr-2 text-xl"
+          className="text-[#006BA6]  hover:text-blue-800 mr-2 text-xl"
         >
           ←
         </button>
-        <span className="text-sm text-gray-600">
-          選択された都道府県 &gt; {locationData[selectedRegion].name}
-        </span>
+        <div className="text-sm text-gray-600 flex gap-[19px]">
+         <span className='text-[#006BA6]  font-medium text-[16px]'>選択された都道府県</span>  &gt; <span>{locationData[selectedRegion].name}</span>
+        </div>
       </div>
 
-      <h3 className="font-bold text-lg mb-4 text-gray-800">
-        都道府県を選択してください
-      </h3>
+    
 
       <div className="flex flex-wrap gap-2">
         {Object.keys(locationData[selectedRegion].prefectures).map(
@@ -269,7 +270,7 @@ const HeroSlider = () => {
             <button
               key={prefecture}
               onClick={() => handlePrefectureSelect(prefecture)}
-              className="px-3 py-1 border border-blue-300 text-blue-600 rounded hover:bg-blue-50 transition-colors"
+              className="px-3 py-1 border border-blue-300 text-[#006BA6] rounded hover:bg-blue-50 transition-colors"
             >
               {prefecture}
             </button>
@@ -289,6 +290,9 @@ const HeroSlider = () => {
 
     return (
       <div className="p-4">
+         <h3 className="font-bold text-lg mb-4 text-gray-800">
+          エリアを選択してください
+        </h3>
         <div className="flex items-center mb-4">
           <button
             onClick={() =>
@@ -296,35 +300,33 @@ const HeroSlider = () => {
                 selectedRegion === '北海道' ? 'region' : 'prefecture',
               )
             }
-            className="text-[#006BA6]  mr-2 text-xl"
+            className="text-[#006BA6]  mr-4 text-xl cursor-pointer"
           >
             ←
           </button>
-          <span className="text-sm text-gray-600">
-            選択された都道府県 &gt;{' '}
-            {selectedRegion === '北海道' ? '北海道' : selectedPrefecture} (
-            {count})
-          </span>
+          <div className="text-sm text-gray-600 flex gap-[19px]">
+            <span className='text-[#006BA6] font-medium text-[16px]'>選択された都道府県</span>  &gt;
+           <span className='font-medium text-[16px]'> {selectedRegion === '北海道' ? '北海道' : selectedPrefecture} (
+            {count})</span>
+          </div>
         </div>
 
-        <h3 className="font-bold text-lg mb-4 text-gray-800">
-          エリアを選択してください
-        </h3>
+       
 
-        <div className="space-y-2 mb-4 max-h-48 overflow-y-auto">
+        <div className="space-y-[20px] mb-[25px] overflow-y-auto">
           {areas.map((area) => (
             <label
               key={area}
-              className="flex items-center space-x-2 hover:bg-gray-50 p-2 rounded cursor-pointer"
+              className="flex items-center space-x-2 hover:bg-gray-50 rounded cursor-pointer"
             >
               <input
                 type="checkbox"
                 checked={selectedAreas.includes(area)}
                 onChange={() => handleAreaToggle(area)}
-                className="w-4 h-4 text-[#006BA6] border-gray-300 rounded focus:ring-[#006BA6]"
+                className="w-[20px] h-[20px] text-[#006BA6] border-gray-300 rounded-[3px] focus:ring-[#006BA6] accent-[#006BA6]"
               />
-              <span className="text-[#006BA6]">{area}</span>
-              <span className="text-gray-500 text-sm">(5)</span>
+              <span className="text-[#006BA6] border border-[#CBCBCB] px-[20px] py-[4.5px] rounded-[3px]">{area}</span>
+              <span className="text-[#2C3237] text-[18px] font-medium">(5)</span>
             </label>
           ))}
         </div>
@@ -379,8 +381,8 @@ const HeroSlider = () => {
             />
           </div>
 
-          <div className="flex flex-1  items-center w-full  border-0 px-3 py-[10px] gap-[20px] h-[59px] border-r-0 md:border-r border-[#BEBEBE] border-b md:border-b-0">
-            <div className="w-[30px] flex">
+          <div className="flex flex-1  items-center w-full  border-0 px-3 py-[10px] gap-[20px]  h-[59px] border-r-0 md:border-r border-[#BEBEBE] border-b md:border-b-0" >
+            <div className="w-[30px]">
               <Image
                 src="/assets/svg/map-location.svg"
                 width={22}
@@ -390,7 +392,7 @@ const HeroSlider = () => {
               />
             </div>
             <div
-              className="w-[79%] relative  h-full cursor-pointer"
+              className="flex-10/12 relative  h-full cursor-pointer z-50"
               onClick={handleLocationInputClick}
             >
               {/* Placeholder text - shown when no tags and no location value */}
@@ -404,7 +406,7 @@ const HeroSlider = () => {
               {locationTags.length > 0 && (
                 <div
                   ref={placeholderRef}
-                  className="flex items-center overflow-x-auto scrollbar-hide h-full gap-1 justify-flex-start z-10"
+                  className="flex items-center overflow-x-auto scrollbar-hide h-full gap-1 justify-start z-10 md:w-[12.5vw] lg:w-[10.9vw]"
                   style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                 >
                   {locationTags.map((tag, index) => (
@@ -429,7 +431,7 @@ const HeroSlider = () => {
 
               {/* Location value text - shown when there's a value but no tags */}
               {locationValue && locationTags.length === 0 && (
-                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#2C3237] pointer-events-none z-0">
+                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#2C3237] pointer-events-none">
                   {locationValue}
                 </div>
               )}
@@ -446,7 +448,7 @@ const HeroSlider = () => {
             {isLocationDropdownOpen && (
               <div
                 ref={dropdownRef}
-                className="absolute top-full left-0 md:left-[22%] right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-78%] max-w-full overflow-y-auto"
+                className="absolute top-full left-0 md:left-[22%] right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 w-full md:w-[67%] lg:w-[62%] max-w-full overflow-y-auto"
               >
                 {currentStep === 'region' && renderRegionSelection()}
                 {currentStep === 'prefecture' && renderPrefectureSelection()}
