@@ -18,3 +18,7 @@ font-size: 28px;
 font-weight: 900;
 color:#006BA6;
 }
+
+.modal-gallery-slider .swiper-button-next, .modal-gallery-slider .swiper-button-prev{
+  color:#fff;
+}
