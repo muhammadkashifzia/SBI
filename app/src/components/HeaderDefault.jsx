@@ -47,7 +47,7 @@ export default function Sidebar() {
               ユーザー向けログイン
             </button>
             <Link
-              href="/register"
+              href="/auth/login"
               className="bg-[#006BA6] text-[#ffffff] px-3 py-[12px] rounded-[5px] flex items-center gap-[4px] justify-center cursor-pointer text-[16px] font-bold leading-[24px] max-w-[177px] w-full h-[36px]"
             >
               店舗向けログイン
