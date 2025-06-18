@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import ImageUploadSection from "../../components/ImageUploadSection";
+import ImageUploadSection from "../../components/dashboard/ImageUploadSection";
 import FormField from "../../components/shared/StoreForm";
 import { Button } from "@/components/ui/button";
 import {formFields,urlFeilds,infolimit} from '../../InputFeildData/Dhshboard/basicinfo'
