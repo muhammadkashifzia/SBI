@@ -7,11 +7,15 @@ const SearchForm = () => {
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
   const [locationValue, setLocationValue] = useState('');
   const [locationTags, setLocationTags] = useState([]);
+  const [isReviewDropdownOpen, setIsReviewDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest('.location-input-container')) {
         setIsLocationDropdownOpen(false);
+      }
+      if (!event.target.closest('.review-input-container')) {
+        setIsReviewDropdownOpen(false);
       }
     };
 
@@ -22,6 +26,11 @@ const SearchForm = () => {
   const handleLocationInputClick = () => {
     setIsLocationDropdownOpen(!isLocationDropdownOpen);
   };
+ 
+    const handleReviewInputClick = () => {
+    setIsReviewDropdownOpen(!isReviewDropdownOpen);
+  };
+
 
   const handleLocationSelect = (locationText, tags) => {
     setLocationValue(locationText);
@@ -82,6 +91,8 @@ const SearchForm = () => {
         iconWidth={31}
         iconHeight={32}
         isDropdownOpen={isLocationDropdownOpen}
+        onInputClick={handleReviewInputClick}
+        // onLocationSelect={handleReviewSelect}
       />
 
       {/* Star Rating Search */}
