@@ -8,25 +8,32 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
-export default function StoreForm({ fields }) {
+export default function StoreForm({ fields, formik }) {
   return (
     <div className="space-y-[29px] text-[#2C3237] font-normal text-[16px]">
       {fields.map((field, index) => (
         <div key={index}>
-{field.label && (
-  <label className="block mb-[8px] h-[23px]">{field.label}</label>
-)}
+          {field.label && (
+            <label className="block mb-[8px] h-[23px]">{field.label}</label>
+          )}
 
           {field.type === "input" && (
             <Input
+              name={field.name}
+              value={formik.values[field.name] || ''}
+              onChange={formik.handleChange}
               placeholder={field.placeholder}
               className="px-[16px] py-[14px] h-[48px] rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
             />
           )}
 
           {field.type === "select" && (
-            <Select>
-              <SelectTrigger className="!h-[48px] w-full px-[16px]  py-[14px] text-[16px]">
+            <Select
+              name={field.name}
+              value={formik.values[field.name] || ''}
+              onValueChange={(value) => formik.setFieldValue(field.name, value)}
+            >
+              <SelectTrigger className="!h-[48px] w-full px-[16px] py-[14px] text-[16px]">
                 <SelectValue placeholder={field.placeholder} />
               </SelectTrigger>
               <SelectContent>
@@ -46,12 +53,15 @@ export default function StoreForm({ fields }) {
           {field.type === "textarea" && (
             <>
               <Textarea
+                name={field.name}
+                value={formik.values[field.name] || ''}
+                onChange={formik.handleChange}
                 placeholder={field.placeholder}
                 rows={4}
-                className="px-[16px]  rounded-[4px] py-[14px] !h-[73px]"
+                className="px-[16px] rounded-[4px] py-[14px] !h-[73px]"
               />
               {field.note && (
-                <span className="block text-[#808080]  text-[10px] font-normal mt-[8px] rounded-[4px] focus-visible:outline-none focus-visible:ring-0">
+                <span className="block text-[#808080] text-[10px] font-normal mt-[8px] rounded-[4px] focus-visible:outline-none focus-visible:ring-0">
                   {field.note}
                 </span>
               )}
@@ -80,14 +90,20 @@ export default function StoreForm({ fields }) {
                 </div>
               </div>
 
-              <div className="flex gap-12 w-full ">
+              <div className="flex gap-12 w-full">
                 <div className="flex items-center gap-2 flex-1">
                   <Input
+                    name="priceRangeNightMin"
+                    value={formik.values.priceRangeNightMin || ''}
+                    onChange={formik.handleChange}
                     placeholder="最小"
                     className="h-[48px] flex-1 rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
                   />
                   <span>~</span>
                   <Input
+                    name="priceRangeNightMax"
+                    value={formik.values.priceRangeNightMax || ''}
+                    onChange={formik.handleChange}
                     placeholder="最大"
                     className="h-[48px] flex-1 rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
                   />
@@ -95,11 +111,17 @@ export default function StoreForm({ fields }) {
 
                 <div className="flex items-center gap-2 flex-1">
                   <Input
+                    name="priceRangeDayMin"
+                    value={formik.values.priceRangeDayMin || ''}
+                    onChange={formik.handleChange}
                     placeholder="最小"
                     className="h-[48px] flex-1 rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
                   />
                   <span>~</span>
                   <Input
+                    name="priceRangeDayMax"
+                    value={formik.values.priceRangeDayMax || ''}
+                    onChange={formik.handleChange}
                     placeholder="最大"
                     className="h-[48px] flex-1 rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
                   />
@@ -119,8 +141,11 @@ export default function StoreForm({ fields }) {
               </span>
 
               <Input
+                name={field.name}
+                value={formik.values[field.name] || ''}
+                onChange={formik.handleChange}
                 placeholder={field.placeholder}
-                className="pl-10 h-[48px] pl-[50px]  py-[16px] rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
+                className="pl-10 h-[48px] pl-[50px] py-[16px] rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
               />
             </div>
           )}
