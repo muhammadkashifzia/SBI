@@ -1,9 +1,10 @@
 'use client';
+
 import './globals.css';
 import HeaderDefault from '@/components/HeaderDefault';
 import Footer from '@/components/Footer';
-import { Noto_Sans_JP} from 'next/font/google';
-
+import { Noto_Sans_JP } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 
 export const noto = Noto_Sans_JP({
   subsets: ['latin'],
@@ -12,19 +13,16 @@ export const noto = Noto_Sans_JP({
   variable: '--font-noto',
 });
 
-
-const metadata = {
-  title: 'SBI',
-  description: '',
-};
-
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
+  const isAuthPage = pathname === '/auth/login'; // Add other paths if needed
+
   return (
-    <html lang="en" className={`${noto.variable}`}>
+    <html lang="ja" className={`${noto.variable}`}>
       <body suppressHydrationWarning>
-           <HeaderDefault />
-          {children}
-          <Footer />
+        {!isAuthPage && <HeaderDefault />}
+        {children}
+        {!isAuthPage && <Footer />}
       </body>
     </html>
   );
