@@ -4,7 +4,7 @@ export default function AnnouncementModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#000000cc]">
+    <div className="fixed inset-0 z-20] flex items-center justify-center bg-[#000000cc]">
       <div className="bg-white max-w-[500px] rounded-[5px] shadow-lg relative p-[24px]">
         <div className="flex items-center justify-between">
           <h2 className="text-[20px] font-bold leading-[24px] test-[#212121]">お知らせ</h2>

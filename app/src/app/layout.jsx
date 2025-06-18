@@ -15,14 +15,14 @@ export const noto = Noto_Sans_JP({
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const isAuthPage = pathname === '/auth/login'; // Add other paths if needed
+  const hideHeaderFooter = ['/auth/login', '/auth/forgot-password'].includes(pathname);
 
   return (
     <html lang="ja" className={`${noto.variable}`}>
       <body suppressHydrationWarning>
-        {!isAuthPage && <HeaderDefault />}
+        {!hideHeaderFooter && <HeaderDefault />}
         {children}
-        {!isAuthPage && <Footer />}
+        {!hideHeaderFooter && <Footer />}
       </body>
     </html>
   );

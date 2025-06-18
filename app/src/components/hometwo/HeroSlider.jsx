@@ -1,6 +1,9 @@
-// components/HeroSlider.js
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 import React from 'react';
-cccccc
+
 
 const HeroSlider = () => {
   return (
