@@ -8,10 +8,21 @@ const ProductsSection = () => {
     {
       id: 1,
       title: "評判コース 松",
-      price: "15,000",
-      originalPrice: "19,000",
-      description: "おすすめ商品・サービスの参考です",
-      image: "/path/to/image.jpg"
+      originalPrice: "価格 : ¥19,000 →(割引後) ¥15,000",
+      description: "こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。",
+      image: "/public/demo.png"
+    }, {
+      id: 2,
+      title: "評判コース 松",
+      originalPrice: "価格 : ¥19,000 →(割引後) ¥15,000",
+      description: "こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。",
+      image: "/public/demo.png"
+    }, {
+      id: 3,
+      title: "評判コース 松",
+      originalPrice: "価格 : ¥19,000 →(割引後) ¥15,000",
+      description: "こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。",
+      image: "/public/demo.png"
     }
     // Add more sample products as needed
   ]);
@@ -19,7 +30,7 @@ const ProductsSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
 
-  const handleAddProduct = () => {
+  const handleAddProduct = () => {   
     setEditingProduct(null);
     setIsModalOpen(true);
   };
@@ -51,18 +62,19 @@ const ProductsSection = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-[20px] ">
+      
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-[20px] font-bold">おすすめの商品・サービス</h2>
+        <h2 className="text-[28px] font-bold text-[#2C3237]" >おすすめの商品・サービス</h2>
         <Button 
           onClick={handleAddProduct}
-          className="bg-[#006BA6] hover:bg-[#005a8c]"
+          className="bg-[#006BA6] text-[16px] rounded-[4px] font-bold text-[#FFFFFF] w-[150px] h-[36px]"
         >
           商品を追加
         </Button>
       </div>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-[30px]">
         {products.map((product) => (
           <ProductCard
             key={product.id}
