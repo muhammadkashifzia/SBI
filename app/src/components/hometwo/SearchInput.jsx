@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const SearchInput = ({ placeholder, iconSrc, iconAlt, iconWidth, iconHeight }) => {
   return (
-    <div className="flex flex-1 items-center w-full border-0 px-3 gap-[20px] h-[59px] border-r-0 md:border-r border-b md:border-b-0 border-[#BEBEBE]">
+    <div className="flex flex-1 items-center w-full border-0 px-3 gap-[20px] h-[59px] border-r-0 md:border-r border-b md:border-b-0 border-[#BEBEBE] filter-search">
       <span>
         <Image
           src={iconSrc}

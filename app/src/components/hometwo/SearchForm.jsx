@@ -59,7 +59,7 @@ const SearchForm = () => {
   };
 
   return (
-     <div className='flex relative bottom-[50px] left-1/2 transform -translate-x-1/2 w-[95%] md:w-[95%] lg:w-[80%] md:max-w-[100%] lg:max-w-[1360px] bg-white shadow-lg rounded-[5px] py-[14px] px-[20px] items-center justify-between border border-[#DDDDDD] flex-col md:flex-row z-10'>
+     <div className='flex relative bottom-[50px] left-1/2 transform -translate-x-1/2 w-[95%] md:w-[95%] lg:w-[80%] md:max-w-[100%] lg:max-w-[1360px] bg-white shadow-lg rounded-[5px] py-[14px] px-[20px] items-center justify-between border border-[#DDDDDD] flex-col md:flex-row z-[2]'>
     <div className="grid grid-cols-1 md:grid-cols-4  w-full">
       {/* Keyword Search */}
       <SearchInput

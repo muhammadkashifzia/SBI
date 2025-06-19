@@ -24,13 +24,13 @@ const LocationInput = ({
   }, [locationTags]);
 
   return (
-    <div className="flex flex-1 items-center w-full border-0 px-3 gap-[20px] h-[59px] border-r-0 md:border-r border-b md:border-b-0 border-[#BEBEBE]">
+    <div className="flex flex-1 items-center w-full border-0 px-3 gap-[20px] h-[59px] border-r-0 md:border-r border-b md:border-b-0 border-[#BEBEBE] location-search">
       <div className="w-[30px]">
         <Image
           src="/assets/svg/map-location.svg"
           width={22}
           height={30}
-          className="w-[18px] md:w-[22px] h-[30px] md:h-[30px]"
+          className="w-[18px] md:w-[22px] h-[30px] md:h-[30px] flex max-w-[18px]"
           alt="mapLocationIcon"
         />
       </div>

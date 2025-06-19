@@ -22,3 +22,11 @@ color:#006BA6;
 .modal-gallery-slider .swiper-button-next, .modal-gallery-slider .swiper-button-prev{
   color:#fff;
 }
+@media screen and (min-device-width: 769px) and (max-device-width: 1200px) { 
+     .location-search, .filter-search {
+         gap: 5px;
+    }
+    .header-btn, .custom-link{
+         gap: 10px;
+    }
+}

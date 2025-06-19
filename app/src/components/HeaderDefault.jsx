@@ -24,7 +24,7 @@ export default function Sidebar() {
 
   return (
     <div className="relative z-10 bg-white">
-      <header className="md:container mx-auto  py-[16px] md:py-[12px] flex items-center justify-start md:justify-between px-4 relative">
+      <header className="lg:container mx-auto  py-[16px] md:py-[12px] flex items-center justify-start md:justify-between px-4 relative">
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/assets/svg/logo.svg"
@@ -34,12 +34,12 @@ export default function Sidebar() {
             className="w-[132.92px] h-[56px] md:w-[132.92px] md:h-[56px]"
           />
         </Link>
-        <div className="hidden md:flex w-full gap-[30px] justify-end">
+        <div className="hidden lg:flex w-full gap-[30px] justify-end custom-link">
           <div className="flex gap-[10px] items-center text-[16px] font-bold leading-[24px]">
             <Link href="/about">Web3 割について</Link>|
             <Link href="/shop">店舗無料掲載希望</Link>
           </div>
-          <div className="flex gap-[30px]">
+          <div className="flex gap-[30px] header-btn">
             <button
                onClick={() => setIsModalOpen(true)}
               className="break-keep bg-[#006BA6] text-[#ffffff] px-3 py-[12px] rounded-[5px] flex items-center gap-[4px] justify-center cursor-pointer text-[16px] font-bold leading-[24px] max-w-[177px] w-full h-[36px]"
@@ -54,7 +54,7 @@ export default function Sidebar() {
             </Link>
           </div>
         </div>
-        <div className="ml-[18px] hidden md:flex">
+        <div className="md:ml-[10px] lg:ml-[18px] hidden lg:flex">
           <button
                 onClick={() => setShowModal(true)}
             className="relative bg-[#006BA6] text-[#ffffff] px-3 py-[12px] rounded-[4px] flex items-center  cursor-pointer max-w-full w-[36px] h-[36px]"
@@ -65,7 +65,7 @@ export default function Sidebar() {
         </div>
         <button
           onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="md:hidden mr-4 focus:outline-none absolute right-[0px] top-[50%] transform -translate-y-1/2"
+          className="lg:hidden mr-4 focus:outline-none absolute right-[0px] top-[50%] transform -translate-y-1/2"
         >
           <div className="w-[30px] h-6 relative flex flex-col justify-center items-center">
             {sidebarOpen ? (
