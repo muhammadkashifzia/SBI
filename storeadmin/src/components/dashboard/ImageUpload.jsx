@@ -25,53 +25,78 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
 
   return (
     <>
-      <div className="border border-[#E6E6E6] rounded-md p-4 w-full max-w-[500px] mx-auto text-center">
-        <div className="text-[#666] mb-4">
-          <div className="text-[14px]">クリックしてアップロード</div>
-          <div className="text-[12px]">
-            ドラッグ＆ドロップ JPG, JPEG, PNGファイル
+      <div className=" p-[20px] w-full  ">
+        <div className="border border-dashed border-[#D4D4D4]  rounded-[12px] w-full max-w-[604px] mx-auto py-[14px] ">
+          <div className=" mx-auto w-full rounded-[4px] flex flex-col items-center justify-center  mb-[10px] cursor-pointer text-[17px] text-[#2C3237] font-bold leading-[27px]">
+            <img
+              src="/svg/dashboard/gallary.svg"
+              alt="Upload Icon"
+              className="w-[48px] h-[48px] "
+            />
+            <div className="text-[#006BA6] pt-[18px]">
+              クリックしてアップロード
+            </div>
+            <div className="">ドラッグ＆ドロップ JPG, JPEG, PNGファイル</div>
+          </div>
+          <div className="max-w-[371px] mx-auto  ">
+            {file && (
+              <div className="relative w-[150px] h-[84px]  my-[15px]  rounded-[5px]  gap-[10px]">
+                <img
+                  src={URL.createObjectURL(file)}
+                  alt="preview"
+                  className="object-cover w-full h-full max-w-[150px] max-h-[84px] mx-[20px]"
+                />
+                <div className="absolute top-1 right-[-120px]  ">
+                  {file.name}
+                </div>
+
+                <div className="absolute top-17 right-[-120px] ">
+                  <img
+                    src="/svg/dashboard/delete.svg"
+                    onClick={() => setFile(null)}
+                    alt="delete"
+                    className="w-4 h-4"
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="mb-[8px] ">
+              <label
+                htmlFor="fileUpload"
+                className="text-[#2C3237] text-[16px] cursor-pointer inline-block font-normal   "
+              >
+                写真属性を選択
+              </label>
+
+              <Input
+                id="fileUpload"
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                className="hidden !h-[48px] px-[16px] py-[14px]"
+              />
+            </div>
+            <CategorySelect value={category} onChange={setCategory} />
+            <div className="w-full flex justify-center mt-[10px]">
+              <Button
+                onClick={handleUpload}
+                className="w-[150px] bg-[#006BA6] hover:bg-[#006BA6] text-white font-bold rounded"
+              >
+                アップロード
+              </Button>
+            </div>
           </div>
         </div>
-
-        {file && (
-          <div className="relative w-[120px] h-[80px] mx-auto mb-2">
-            <img
-              src={URL.createObjectURL(file)}
-              alt="preview"
-              className="object-cover rounded-md w-full h-full"
-            />
-            <button
-              onClick={() => setFile(null)}
-              className="absolute top-[-10px] right-[-10px] text-red-500 bg-white rounded-full w-6 h-6 flex items-center justify-center shadow"
-            >
-              ✖
-            </button>
-          </div>
-        )}
-
-        <Input
-          type="file"
-          accept="image/*"
-          onChange={handleFileChange}
-          className="mb-3"
-        />
-
-        <CategorySelect value={category} onChange={setCategory} />
-
-        <Button
-          onClick={handleUpload}
-          className="mt-4 w-[150px] bg-[#006BA6] hover:bg-[#006BA6] text-white font-bold rounded"
-        >
-          アップロード
-        </Button>
-      </div>{" "}
-      <div className="flex flex-wrap gap-4 mt-8">
+      </div>
+      <div className="flex flex-wrap gap-[30px] mt-[32px]">
         {uploadedImages.map((img, index) => (
           <ImageCard
             key={index}
+            index={index + 1}
             src={img.url}
             label={img.category}
-            onDelete={() => onDelete(index)} // <-- IMPORTANT
+            onDelete={() => onDelete(index)}
           />
         ))}
       </div>

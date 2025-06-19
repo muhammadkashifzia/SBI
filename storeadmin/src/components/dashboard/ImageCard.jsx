@@ -1,31 +1,31 @@
 import React from "react";
-import { X } from "lucide-react"; // Already correct
 
-export default function ImageCard({ src, label, onDelete }) {
-    console.log(src)
+export default function ImageCard({ src, label, index, onDelete }) {
   return (
-    <div className="relative w-[110px]">
-      <div className="relative w-[110px] h-[110px] rounded-[6px] overflow-hidden border border-[#E6E6E6]">
-        <img
-          src={src}
-          alt={label}
-          className="w-full h-full object-cover"
-        />
+    <div className="relative w-[228px] h-[181px] border rounded-[4px]">
+      <div className="relative w-[228px] h-[134px]  border border-[#E6E6E6]">
+        <img src={src} alt={label} className="w-full h-full object-cover rounded-t-[5px] " />
 
-        {/* Delete Button */}
+        <div className="absolute  w-[20px]  h-[20px] top-1 left-1 bg-white text-[14px] font-normal text-[#2C3237] px-[6px]  rounded-[4px] ">
+          {index}
+        </div>
+
         {onDelete && (
           <button
             type="button"
             onClick={onDelete}
-            className="absolute top-1 right-1 w-6 h-6 bg-white border border-gray-200 rounded-full shadow flex items-center justify-center hover:bg-gray-100"
+            className="absolute top-1 right-1 w-[20px] h-[20px] flex items-center justify-center"
           >
-            <X size={16} className="text-gray-700" />
+            <img
+              src="/svg/dashboard/delete.svg"
+              alt="delete"
+              className="w-4 h-4"
+            />
           </button>
         )}
       </div>
 
-      {/* Label under image */}
-      <p className="text-center mt-2 text-sm font-medium text-[#2C3237] truncate w-full">
+      <p className="text-start my-[15px] mx-[15px] text-[14px] text-[#2C3237] font-normal  bg-white">
         {label}
       </p>
     </div>

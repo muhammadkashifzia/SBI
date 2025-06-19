@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import UploadBox from '../../components/dashboard/ImageUpload';
+import React, { useState } from "react";
+import UploadBox from "../../components/dashboard/ImageUpload";
 
 export default function ParentComponent() {
   const [uploadedImages, setUploadedImages] = useState([]);
@@ -8,22 +8,20 @@ export default function ParentComponent() {
     const newImage = {
       url: URL.createObjectURL(file),
       category,
-      file
+      file,
     };
     setUploadedImages([...uploadedImages, newImage]);
   };
 
-  
-const handleDelete = (index) => {
-  setUploadedImages((prev) => prev.filter((_, i) => i !== index));
-};
+  const handleDelete = (index) => {
+    setUploadedImages((prev) => prev.filter((_, i) => i !== index));
+  };
   return (
-    <div>
-      <UploadBox 
-        onUpload={handleUpload} 
+    <div className="p-[20px]">
+      <UploadBox
+        onUpload={handleUpload}
         uploadedImages={uploadedImages}
-            onDelete={handleDelete} // 👈 passed here
-
+        onDelete={handleDelete}
       />
     </div>
   );
