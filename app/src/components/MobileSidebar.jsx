@@ -1,14 +1,15 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import AnnouncementModal from '@/components/notice/noticeModal';
+import React, { useEffect, useState } from 'react';
 export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
   if (!sidebarOpen) return null;
 
   const handleCloseSidebar = () => {
     setSidebarOpen(false);
   };
-
+  const [showModal, setShowModal] = useState(false);
   return (
     <>
       {sidebarOpen && (
@@ -83,7 +84,7 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
 
             <div className="flex flex-col gap-[8px] mb-[32px]">
               <Link
-                href="/login"
+                href="/auth/login"
                 onClick={handleCloseSidebar}
                 className="w-full bg-[#006BA6] border border-[#006BA6] text-[#ffffff] font-semibold py-2 rounded flex justify-center items-center space-x-2"
               >
@@ -92,15 +93,18 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 </span>
               </Link>
               <Link
-                href="/register"
+                href="/auth/signin"
                 onClick={handleCloseSidebar}
                 className="w-full bg-[#006BA6] text-white py-2 rounded flex justify-center items-center space-x-2"
               >
                 店舗向けログイン
               </Link>
-              <Link
-                href="/register"
-                onClick={handleCloseSidebar}
+              <button
+                onClick={() => {
+                     setShowModal(true);
+            
+               
+                }}
                 className="relative w-full bg-[#ffffff] text-[#070707] py-2 rounded flex justify-center items-center space-x-2"
               >
                 <div className="absolute left-[10px] top-[50%] transform -translate-y-1/2">
@@ -114,11 +118,15 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 </div>
                 お知らせ
                 <span className="inline-block w-[7px] h-[7px] bg-[#FF0000] rounded-full absolute top-[50%] transform -translate-y-1/2  right-[10px]"></span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       )}
+      <AnnouncementModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
     </>
   );
 }
