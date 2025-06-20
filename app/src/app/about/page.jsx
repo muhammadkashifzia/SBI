@@ -313,8 +313,8 @@ export default function About() {
         }}
       >
         <div>
-          <div className="py-[40px] text-center absolute top-1/2 left-[50%] transform -translate-y-1/2 -translate-x-1/2 text-white font-bold text-sm space-y-1 w-full">
-            <h3 className="font-bold text-[16px] md:text-[30px] leading-[38px] mb-[27px]">
+          <div className="py-[36px] text-center absolute top-1/2 left-[50%] transform -translate-y-1/2 -translate-x-1/2 text-white font-bold text-sm space-y-1 w-full px-[15px]">
+            <h3 className="font-bold text-[16px] md:text-[30px] leading-[38px] mb-[27px] max-w-[1105px] mx-auto">
          ※使用方法につきまして質問等がございましたらBto3 ディスコードの「🎟support」チャンネルよりご連絡ください。
             </h3>
             <p>
