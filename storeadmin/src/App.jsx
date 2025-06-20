@@ -17,7 +17,7 @@ function App() {
         <Route path="/verify" element={<OtpVerify />} />
         <Route path="/account-created" element={<AccountCreated />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/reviews" element={<Reviews />} /> 
         <Route path="/settings" element={<Settings />} />
       </Routes>
     </Router>

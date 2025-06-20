@@ -12,7 +12,7 @@ const Sidebar = () => {
         <div className="pb-[22px]">
           <img
             src="/svg/shared/MainLogo.svg"
-            className="w-[132px] h-[56px]"
+            className="w-[132px] h-[69px]"
             alt="Main Logo"
           />
         </div>
@@ -59,7 +59,6 @@ const Sidebar = () => {
       </div>
 
       <div className="space-y-[20px]">
-        <div>
           <Link
             to="/settings"
             className={`flex items-center gap-[10px] px-[15px] py-[8px] rounded-full text-[16px] font-medium ${
@@ -78,13 +77,10 @@ const Sidebar = () => {
             />
             設定
           </Link>
-        </div>
-        <div>
-          <button className="flex items-center gap-2 text-[#006BA6] hover:text-red-800">
+          <button className="flex items-center  text-[#006BA6] flex items-center gap-[10px] px-[15px] py-[8px] rounded-full text-[16px] font-medium ">
             <img src="/svg/sidebar/logout.svg" alt="Logout" />
             ログアウト
           </button>
-        </div>
       </div>
     </aside>
   );

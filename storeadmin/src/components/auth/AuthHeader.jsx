@@ -12,7 +12,7 @@ const AuthHeader = ({ title, subtitle }) => {
         {title}
       </h2>
       <p className="text-[16px] font-normal leading-[24px] text-[#2C3237]">
-        {subtitle}
+        {subtitle} 
       </p>
     </div>
   );

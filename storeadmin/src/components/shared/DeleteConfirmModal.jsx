@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 const DeleteConfirmModal = ({ onClose, onConfirm }) => {
   return (
     <BaseModal onClose={onClose} className="max-w-[400px]">
-      <div className="p-[20px] text-center   mx-auto ">
+      <div className=" text-center   mx-auto ">
         <img
-          src="/svg/dashboard/delete.svg"
+          src="svg/dashboard/deletemodal.svg"
           alt="Delete Icon"
           className="w-[78px] h-[78px] mx-auto mb-[16px]"
         />
@@ -22,7 +22,7 @@ const DeleteConfirmModal = ({ onClose, onConfirm }) => {
         <div className="flex justify-center pt-[36px]">
           <Button
             onClick={onConfirm}
-            className="bg-[#F94A65] w-[352px] h-[36px] text-white font-bold rounded-[4px] hover:bg-[#005a8c]"
+            className="bg-[#F94A65] w-[352px] h-[36px] text-white font-bold rounded-[4px] hover:bg-[#F94A65]"
           >
             削除する
           </Button>

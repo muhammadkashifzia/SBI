@@ -5,8 +5,11 @@ import { Badge } from "@/components/ui/badge";
 import { Percent, Edit, Trash2, Plus } from "lucide-react";
 import BaseModal from "../../components/shared/BaseModal";
 import CouponModal from "../../components/dashboard/CouponModal";
+import DeleteConfirmModal from "../../components/shared/DeleteConfirmModal";
 
 function Coupons() {
+  const [deleteIndex, setDeleteIndex] = useState(null);
+
   const [coupons, setCoupons] = useState([
     {
       id: 1,
@@ -17,8 +20,13 @@ function Coupons() {
       fileId:
         "※対象のトークン/NFTも所有されている必要がございます。詳細はこちらをご確認ください。",
       isActive: true,
+      discount: "サービス料10％別途",
     },
   ]);
+  const handleConfirmDelete = () => {
+    setCoupons(coupons.filter((c) => c.id !== deleteIndex));
+    setDeleteIndex(null);
+  };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingCoupon, setEditingCoupon] = useState(null);
@@ -80,12 +88,11 @@ function Coupons() {
           <h2 className="text-[24px] font-bold text-[#000000]">クーポン</h2>
           <Button
             onClick={handleAddCoupon}
-            className="bg-[#006BA6]  h-[40px] w-[150px] text-white font-bold px-[26px] py-[9px] rounded-[4px]"
+            className="bg-[#006BA6] hover:bg-[#006BA6]  h-[40px] w-[150px] text-white font-bold px-[26px] py-[9px] rounded-[4px]"
           >
             新規追加
           </Button>
         </div>
-
         {coupons.map((coupon) => (
           <div
             key={coupon.id}
@@ -96,7 +103,7 @@ function Coupons() {
                 <img
                   src="/svg/dashboard/delete.svg"
                   className="w-[20px] h-[20px] absolute top-[10px] left-[10px] "
-                  onClick={() => deleteCoupon(coupon.id)}
+                  onClick={() => setDeleteIndex(coupon.id)}
                   alt="Delete"
                 />
 
@@ -117,7 +124,7 @@ function Coupons() {
                 </div>
 
                 <div className="flex items-start gap-[30px]">
-                  <Button className="bg-[#9F8C5B] h-[31px] w-[112px] font-medium text-[16px] px-[16px] py-[4px] rounded-[3px]">
+                  <Button className="bg-[#9F8C5B]  hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium text-[16px] px-[16px] py-[4px] rounded-[3px]">
                     ご利用条件
                   </Button>
                   <p className="text-[16px] text-[#2C3237] font-medium flex-1">
@@ -126,7 +133,7 @@ function Coupons() {
                 </div>
 
                 <div className="flex items-start gap-[30px]">
-                  <Button className="bg-[#9F8C5B] h-[31px] w-[112px] font-medium text-[16px] px-[16px] py-[4px] rounded-[3px]">
+                  <Button className="bg-[#9F8C5B] hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium text-[16px] px-[16px] py-[4px] rounded-[3px]">
                     備考
                   </Button>
 
@@ -144,6 +151,12 @@ function Coupons() {
             </div>
           </div>
         ))}
+        {deleteIndex !== null && (
+          <DeleteConfirmModal
+            onClose={() => setDeleteIndex(null)}
+            onConfirm={handleConfirmDelete}
+          />
+        )}
 
         {isModalOpen && (
           <CouponModal

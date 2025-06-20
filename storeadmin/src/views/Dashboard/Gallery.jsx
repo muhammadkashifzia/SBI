@@ -17,7 +17,7 @@ export default function ParentComponent() {
     setUploadedImages((prev) => prev.filter((_, i) => i !== index));
   };
   return (
-    <div className="p-[20px]">
+    <div>
       <UploadBox
         onUpload={handleUpload}
         uploadedImages={uploadedImages}

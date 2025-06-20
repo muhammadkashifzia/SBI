@@ -7,7 +7,7 @@ const loginFields = [
   {
     id: "パスワード",
     label: "パスワード",
-    type: "パスワード",
+    type: "password",
     placeholder: "こちらに入力してください",
   },
 ];

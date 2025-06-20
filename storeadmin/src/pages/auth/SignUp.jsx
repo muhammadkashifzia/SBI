@@ -17,9 +17,9 @@ const signUpFields = [
   },
   { id: "email", label: "Email", type: "email", placeholder: "こちらに入力してください" },
   {
-    id: "パスワード",
+    id: "パスワード",  
     label: "パスワード",
-    type: "パスワード",
+    type: "password",
     placeholder: "こちらに入力してください",
   },
 ];

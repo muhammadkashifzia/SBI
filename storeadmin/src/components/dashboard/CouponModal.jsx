@@ -51,7 +51,7 @@ const CouponModal = ({ coupon, onClose, onSave, isProfileComplete }) => {
               onChange={handleChange}
               placeholder="こちらに入力してください"
               rows={4}
-              className="w-full border text-[#2C3237] border-[#E6E6E6] rounded-md px-[16px] py-[10px] text-[16px]"
+              className="w-full border text-[#2C3237] h-[73px] border-[#E6E6E6] rounded-md px-[16px] py-[10px] text-[16px]"
             />
             <p className="text-left text-sm text-gray-500">
               {formData[field.id].length}/{MAX_CHAR}

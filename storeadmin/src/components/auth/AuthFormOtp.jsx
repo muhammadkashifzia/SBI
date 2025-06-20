@@ -10,7 +10,7 @@ import {
 const AuthFormOtp = () => {
   const formik = useFormik({
     initialValues: {
-      otp: "",  
+      otp: "",
     },
     validationSchema: Yup.object({
       otp: Yup.string()
@@ -31,7 +31,7 @@ const AuthFormOtp = () => {
           onChange={(val) => formik.setFieldValue("otp", val)}
         >
           <InputOTPGroup className="flex space-x-[12px]">
-            {[0, 1, 2, 3].map((i) => (
+            {[0, 1, 2, 3, 4, 5].map((i) => (
               <InputOTPSlot
                 key={i}
                 index={i}
@@ -45,16 +45,18 @@ const AuthFormOtp = () => {
       <div className="flex justify-center">
         <Button
           type="submit"
-          className="w-[150px] px-[18px] py-[7px] bg-[#006BA6] border rounded-[4px] h-full max-h-[36px] hover:bg-[#006BA6]"
+          className="w-[150px] px-[18px] py-[7px] bg-[#006BA6] border rounded-[4px] h-full max-h-[36px] hover:bg-[#006BA6] cursor-pointer"
           disabled={!formik.isValid || !formik.dirty}
         >
-          認証する
+          メール認証{" "}
         </Button>
       </div>
 
-      <div className="text-center text-[16px]">
-        <span className="text-[#2C3237] cursor-pointer">メールが届いていない場合</span>
-        <span className="text-[#006BA6]">こちらより再送する</span>{" "}
+      <div className="text-center text-[14px] font-normal">
+        <span className="text-[#808080] ">メールが届いていない場合</span>
+        <span className="text-[#006BA6] underline cursor-pointer">
+          こちらより再送する
+        </span>{" "}
       </div>
     </form>
   );

@@ -54,11 +54,11 @@ const AuthForm = ({ fields, buttonText, type = "register" }) => {
                   {field.type === "password" ? (
                     <Field name={field.id}>
                       {({ field }) => (
-                        <div className="relative w-full">
+                        <div className="relative w-full text-[#2C3237]">
                           <Input
                             id={field.name}
                             type={showPassword ? "text" : "password"}
-                            className="w-full h-[48px] px-[14px] py-[16px] border border-[#E6E6E6] rounded-[4px] pr-12 focus-visible:outline-none focus-visible:ring-0"
+                            className="w-full h-[48px] text-[16px] px-[14px] py-[16px] border border-[#E6E6E6] rounded-[4px] pr-12 focus-visible:outline-none focus-visible:ring-0"
                             {...field}
                             placeholder={
                               fields.find((f) => f.id === field.name)
@@ -85,7 +85,7 @@ const AuthForm = ({ fields, buttonText, type = "register" }) => {
                         <Input
                           id={field.name}
                           type={field.type}
-                          className="w-full h-[48px] px-[14px] py-[16px] border border-[#E6E6E6] rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
+                          className="w-full h-[48px] text-[#2C3237] text-[16px] px-[14px] py-[16px] border border-[#E6E6E6] rounded-[4px] focus-visible:outline-none focus-visible:ring-0"
                           {...field}
                           placeholder={
                             fields.find((f) => f.id === field.name)
@@ -127,12 +127,12 @@ const AuthForm = ({ fields, buttonText, type = "register" }) => {
               </div>
             )}
 
-            {/* Login only: Forgot Password */}
+            {/* Login only: Forgot Password */}   
             {type === "login" && (
               <div className="text-left">
                 <Link
                   to="/forgot-password"
-                  className="text-[14px] text-[#014F8B] cursor-pointer"
+                  className="text-[14px] font-normal underline text-[#014F8B] "
                 >
                   パスワードをお忘れの場合
                 </Link>
@@ -141,7 +141,7 @@ const AuthForm = ({ fields, buttonText, type = "register" }) => {
 
             <Button
               type="submit"
-              className="w-full px-[18px] py-[10px] bg-[#006BA6] text-white border rounded-[4px] max-h-[40px] hover:bg-[#005c90]"
+              className="w-full px-[18px] py-[10px] bg-[#006BA6] text-white border rounded-[4px] h-[40px] hover:bg-[#005c90] cursor-pointer"
               disabled={!(isValid && dirty && (type !== "register" || agree))}
             >
               {buttonText}
@@ -170,7 +170,7 @@ const AuthForm = ({ fields, buttonText, type = "register" }) => {
                   alt="Back"
                   className="w-[20px] h-[20px]"
                 />
-                <span className="text-[16px] text-[#006BA6] leading-[150%] ">
+                <span className="text-[14px] text-[#475467] font-normal ">
                   ログインページに戻る
                 </span>
               </Link>
