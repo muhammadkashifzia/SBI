@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/shared/Sidebar";
-import DashboardHome from "../../views/Dashboard/DashboardHome";
+import DashboardHome from "../../views/Dashboard/DashboardLayout";
 
 const Dashboard = () => {
   return (

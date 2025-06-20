@@ -20,7 +20,7 @@ const tabComponents = {
 const tabs = ["基本情報", "営業時間", "ギャラリー", "おすすめ", "クーポン"];
 
 const DashboardHome = () => {
-  const [activeTab, setActiveTab] = useState("おすすめ");
+  const [activeTab, setActiveTab] = useState("クーポン");
   const ActiveComponent = tabComponents[activeTab];
 
   return (

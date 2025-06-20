@@ -20,7 +20,7 @@ const TermsPolicyModal = ({ onClose }) => {
   }, []);
 
   return (
-    <BaseModal onClose={onClose}>
+    <BaseModal onClose={onClose} className="max-w-[800px]">
       <div className="pt-8 pb-4 px-[24px] flex flex-col h-[70vh]">
         <div className="text-[16px] font-medium text-[#2C3237] mb-[16px] sticky top-0 bg-white z-10">
           利用規約およびプライバシーポリシー

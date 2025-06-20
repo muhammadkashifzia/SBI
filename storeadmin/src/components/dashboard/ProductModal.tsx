@@ -29,7 +29,7 @@ const ProductModal = ({ product, onClose, onSave }) => {
   };
 
   return (
-    <BaseModal onClose={onClose}>
+    <BaseModal onClose={onClose} className="max-w-[800px]">
       <div className="p-6">
         <h2 className="text-[16px] font-medium mb-[24px]">
           {product ? "商品を編集" : "新しい商品を追加"}
