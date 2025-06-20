@@ -11,7 +11,7 @@ export default function RegisterBannerComponent({
   linkUrl
 }) {
   return (
-    <div className="relative w-full overflow-hidden py-[41px] rounded-[5px] mt-[40px] md:mt-0">
+    <div className="relative w-full overflow-hidden py-[41px] rounded-[5px] mt-[40px]">
       <div className="absolute inset-0">
         {imageSrc ? (
           <Image

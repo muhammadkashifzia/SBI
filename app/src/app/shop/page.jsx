@@ -5,10 +5,10 @@ import CustomerStepsComponent from '@/components/stores/customersSteps';
 import RegisterBannerComponent from '@/components/banner/registerBanner';
 export default function About() {
   return (
-    <div className="container mx-auto px-[16px] mb-[43px] md:mb-[85px] mt-[19.5px]">
+    <div className="container mx-auto px-[16px] mb-[43px] md:mb-[100px] mt-[30px]">
       <UseInStoresComponent />
       <CustomerStepsComponent />
-      <div className="mt-[20px] md:mt-[100px] ">
+      <div className="mt-[20px] md:mt-[50px] ">
         <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px] mb-[20px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
@@ -37,11 +37,11 @@ export default function About() {
             <img
               src="/assets/images/customer-image01.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px] md:h-[336px] object-cover rounded-[5px]"
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:pt-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:pt-[30px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -71,7 +71,7 @@ export default function About() {
             <img
               src="/assets/images/customer-image02.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px] md:h-[336px] object-cover rounded-[5px]"
             />
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function About() {
             「綺麗に印刷したい」「ポップスタンドの用意が面倒」などございましたら、こちらのリンクより注意事項をお読みの上お申込みください。
           </p>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-0 md:my-[100px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse mb-0 md:mb-[100px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -109,7 +109,7 @@ export default function About() {
             <img
               src="/assets/images/check-image.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px] md:h-[336px] object-cover rounded-[5px]"
             />
           </div>
         </div>
@@ -131,10 +131,10 @@ export default function About() {
               <img
                 src="/assets/images/check-image01.jpg"
                 alt="NFT"
-                className="w-full h-full rounded-t-[5px] object-cover object-center"
+                className="w-full h-[207px] md:h-[243px] rounded-t-[5px] object-cover object-center"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className=" px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Check 1</h2>
               <p className="font-normal text-[16px]">認証マーク</p>
             </div>
@@ -144,10 +144,10 @@ export default function About() {
               <img
                 src="/assets/images/check-image01.jpg"
                 alt="Shopping"
-                className="w-full h-full rounded-t-[5px] object-cover object-center"
+                className="w-full h-[207px] md:h-[243px] rounded-t-[5px] object-cover object-center"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Check 2</h2>
               <p className="font-normal text-[16px]">店舗情報の編集 </p>
             </div>
@@ -157,18 +157,18 @@ export default function About() {
               <img
                 src="/assets/images/check-image.jpg"
                 alt="Purchase"
-                className="w-full h-full rounded-t-[5px] object-cover object-top"
+                className="w-full h-[207px] md:h-[243px] rounded-t-[5px] object-cover object-top"
               />
             </div>
 
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Check 3</h2>
               <p className="font-normal text-[16px]">掲載の停止</p>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-[40px] md:mt-[100px]">
+      <div className="mt-[40px] md:mt-[50px]">
         <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
@@ -195,7 +195,7 @@ export default function About() {
             <img
               src="/assets/images/check-image01.jpg"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px] md:h-[336px] object-cover rounded-lg"
             />
           </div>
         </div>
@@ -221,11 +221,11 @@ export default function About() {
             <img
               src="/assets/images/check-image01.jpg"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px] md:h-[336px] object-cover rounded-lg"
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse my-[20px]  md:my-[100px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse mb-[20px]  md:mt-[50px] md:mb-[15px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -247,9 +247,9 @@ export default function About() {
           </div>
           <div className="flex-1 w-full md:max-w-[599.2px]">
             <img
-              src="/assets/images/check-image.png"
+              src="/assets/images/image-112.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px] md:h-[336px] object-cover rounded-lg"
             />
           </div>
         </div>

@@ -1,8 +1,8 @@
 export default function CustomerStepsComponent() {
   return (
    <div>
-  <div className="mt-[78px] md:mt-[131px]">
-        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[20px] md:mb-[31px] text-center">
+  <div className="mt-[78px] md:mt-[67px]">
+        <h1 className="text-[24px] md:text-[28px] font-bold mb-[20px] md:mb-[31px] text-center">
           ３ステップで集客開始
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
@@ -14,7 +14,7 @@ export default function CustomerStepsComponent() {
                 className="w-full h-full rounded-t-[5px] object-cover object-top"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 1</h2>
               <p className="font-normal text-[16px]">無料店舗登録</p>
             </div>
@@ -27,7 +27,7 @@ export default function CustomerStepsComponent() {
                 className="w-full h-full rounded-t-[5px] object-cover object-top"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 2</h2>
               <p className="font-normal text-[16px]">QRコードを印刷・設置 </p>
             </div>
@@ -41,7 +41,7 @@ export default function CustomerStepsComponent() {
               />
             </div>
 
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 3</h2>
               <p className="font-normal text-[16px]">
                 送客されたユーザーに割引の提供
