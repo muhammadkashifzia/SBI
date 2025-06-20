@@ -77,7 +77,7 @@ const ProductsSection = () => {
           </h2>
           <Button
             onClick={handleAddProduct}
-            className="bg-[#006BA6] text-[16px] rounded-[4px] font-bold text-[#FFFFFF] w-[150px] h-[36px]"
+            className="bg-[#006BA6] text-[16px] rounded-[4px] font-bold cursor-pointer text-[#FFFFFF] w-[150px] h-[36px]"
           >
             商品を追加
           </Button>
@@ -104,7 +104,7 @@ const ProductsSection = () => {
         <Button
           type="button"
           onClick={() => console.log(schedule)}
-          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] !h-[50px]"
+          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 cursor-pointer rounded w-[150px] !h-[50px]"
         >
           保存
         </Button>

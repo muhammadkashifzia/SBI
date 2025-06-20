@@ -7,7 +7,7 @@ const TopNavBar = ({ activeTab, setActiveTab, tabs }) => (
       {tabs.map((tab) => (
         <button
           key={tab}
-          className={`py-[15px] text-[#000000] px-[25px] rounded-full text-[18px] font-medium ${
+          className={`py-[15px] cursor-pointer text-[#000000] px-[25px] rounded-full text-[18px] font-medium ${
             activeTab === tab ? "bg-[#006BA6] text-white" : "text-gray-700"
           }`}
           onClick={() => setActiveTab(tab)}

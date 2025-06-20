@@ -13,7 +13,7 @@ export default function AccountCreated() {
           />
 
           <div className="flex justify-center mb-[268px]">
-            <Button className="w-[150px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6]">
+            <Button className="w-[150px] bg-[#006BA6] cursor-pointer text-white rounded-[4px] hover:bg-[#006BA6]">
               ログイン
             </Button>
           </div>

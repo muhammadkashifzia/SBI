@@ -95,7 +95,7 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
               <div className="w-full flex justify-center mt-[10px]">
                 <Button
                   onClick={handleUpload}
-                  className="w-[150px] bg-[#006BA6] hover:bg-[#006BA6] text-white font-bold rounded"
+                  className="w-[150px] bg-[#006BA6] hover:bg-[#006BA6] text-white cursor-pointer font-bold rounded"
                 >
                   アップロード
                 </Button>
@@ -126,7 +126,7 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
         <Button
           type="button"
           onClick={() => console.log(schedule)}
-          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] !h-[50px]"
+          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] cursor-pointer !h-[50px]"
         >
           保存
         </Button>

@@ -79,7 +79,7 @@ const WeeklySchedule = () => {
         <Button
           type="button"
           onClick={() => console.log(schedule)}
-          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] !h-[50px]"
+          className="bg-[#006BA6] cursor-pointer hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] !h-[50px]"
         >
           保存
         </Button>

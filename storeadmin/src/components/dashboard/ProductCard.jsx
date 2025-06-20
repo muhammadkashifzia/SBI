@@ -17,7 +17,7 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
             onClick={onEdit}
             className="text-[#006BA6] hover:text-[#005a8c]"
           >
-            <img src="/svg/dashboard/edit.svg" alt="Edit" className="w-[20px]" />
+            <img src="/svg/dashboard/edit.svg" alt="Edit" className="w-[20px] cursor-pointer" />
           </button>
           <button
             onClick={() => setShowDeleteModal(true)}
@@ -26,7 +26,7 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
             <img
               src="/svg/dashboard/reddelete.svg"
               alt="Delete"
-              className="w-[20px]"
+              className="w-[20px] cursor-pointer"
             />
           </button>
         </div>

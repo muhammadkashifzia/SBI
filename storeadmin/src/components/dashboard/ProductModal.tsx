@@ -73,7 +73,7 @@ const ProductModal = ({ product, onClose, onSave }) => {
           <div className="flex justify-center  pt-[4px] rounded-[4px]">
             <Button
               type="submit"
-              className="bg-[#006BA6] w-[400px] h-[36px] text-white font-bold hover:bg-[#005a8c] rounded-[4px]"
+              className="bg-[#006BA6] w-[400px] h-[36px] text-white font-bold cursor-pointer hover:bg-[#005a8c] rounded-[4px]"
             >
               保存する
             </Button>

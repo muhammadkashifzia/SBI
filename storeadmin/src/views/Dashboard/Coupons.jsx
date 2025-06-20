@@ -88,7 +88,7 @@ function Coupons() {
           <h2 className="text-[24px] font-bold text-[#000000]">クーポン</h2>
           <Button
             onClick={handleAddCoupon}
-            className="bg-[#006BA6] hover:bg-[#006BA6]  h-[40px] w-[150px] text-white font-bold px-[26px] py-[9px] rounded-[4px]"
+            className="bg-[#006BA6] hover:bg-[#006BA6]  h-[40px] w-[150px] text-white cursor-pointer font-bold px-[26px] py-[9px] rounded-[4px]"
           >
             新規追加
           </Button>
@@ -102,13 +102,13 @@ function Coupons() {
               <div className="relative w-[212px] h-[358px] bg-[#006BA6] rounded-[5px] flex flex-col items-center justify-center text-white">
                 <img
                   src="/svg/dashboard/delete.svg"
-                  className="w-[20px] h-[20px] absolute top-[10px] left-[10px] "
+                  className="w-[20px] cursor-pointer h-[20px] absolute top-[10px] left-[10px] "
                   onClick={() => setDeleteIndex(coupon.id)}
                   alt="Delete"
                 />
 
                 <img
-                  src="/src/components/dashboard/coupns.svg"
+                  src="/svg/shared/coupns.svg"
                   alt="クーポンアイコン"
                 />
                 <span className="text-[28px] text-[#FFFFFF] font-bold mt-2">
@@ -124,7 +124,7 @@ function Coupons() {
                 </div>
 
                 <div className="flex items-start gap-[30px]">
-                  <Button className="bg-[#9F8C5B]  hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium text-[16px] px-[16px] py-[4px] rounded-[3px]">
+                  <Button className="bg-[#9F8C5B]  hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium cursor-pointer text-[16px] px-[16px] py-[4px] rounded-[3px]">
                     ご利用条件
                   </Button>
                   <p className="text-[16px] text-[#2C3237] font-medium flex-1">
@@ -133,7 +133,7 @@ function Coupons() {
                 </div>
 
                 <div className="flex items-start gap-[30px]">
-                  <Button className="bg-[#9F8C5B] hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium text-[16px] px-[16px] py-[4px] rounded-[3px]">
+                  <Button className="bg-[#9F8C5B] hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium cursor-pointer text-[16px] px-[16px] py-[4px] rounded-[3px]">
                     備考
                   </Button>
 

@@ -77,7 +77,7 @@ const Sidebar = () => {
             />
             設定
           </Link>
-          <button className="flex items-center  text-[#006BA6] flex items-center gap-[10px] px-[15px] py-[8px] rounded-full text-[16px] font-medium ">
+          <button className="flex items-center  cursor-pointer text-[#006BA6] flex items-center gap-[10px] px-[15px] py-[8px] rounded-full text-[16px] font-medium ">
             <img src="/svg/sidebar/logout.svg" alt="Logout" />
             ログアウト
           </button>

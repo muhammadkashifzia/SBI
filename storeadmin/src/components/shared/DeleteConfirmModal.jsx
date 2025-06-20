@@ -22,7 +22,7 @@ const DeleteConfirmModal = ({ onClose, onConfirm }) => {
         <div className="flex justify-center pt-[36px]">
           <Button
             onClick={onConfirm}
-            className="bg-[#F94A65] w-[352px] h-[36px] text-white font-bold rounded-[4px] hover:bg-[#F94A65]"
+            className="bg-[#F94A65] w-[352px] h-[36px] text-white font-bold rounded-[4px] cursor-pointer hover:bg-[#F94A65] "
           >
             削除する
           </Button>

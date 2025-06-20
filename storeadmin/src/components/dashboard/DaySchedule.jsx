@@ -10,7 +10,7 @@ export const DaySchedule = ({
   onToggleClosed,
   onChangeSlot,
   onAddSlot,
-  onRemoveSlot,
+  onRemoveSlot, 
 }) => (
   <div className="mx-[20px]">
     <div className="flex items-center gap-[42px] mt-[30px] mb-[20px]">
@@ -22,10 +22,11 @@ export const DaySchedule = ({
           id={`closed-${day}`}
           checked={closed}
           onCheckedChange={onToggleClosed}
-          className="w-[20px] h-[20px] rounded-[4px]"
+          className="w-[20px] h-[20px] rounded-[4px] data-[state=checked]:bg-[#006BA6] data-[state=checked]:text-white data-[state=checked]:border-none border"
         />
         <label
           htmlFor={`closed-${day}`}
+
           className="font-normal text-[16px] text-[#070707] !h-[23px]"
         >
           定休日
@@ -37,7 +38,7 @@ export const DaySchedule = ({
       <div className="space-y-2">
         {timeSlots.map((slot, index) => (
           <div key={index} className="w-full flex items-start justify-between">
-            <div className="flex items-start gap-[30px] w-[calc(100%-180px)]">
+            <div className="flex items-start gap-[30px] w-[80%]">
               <div className="flex flex-col w-full">
                 <span className="text-[16px] font-normal text-[#070707] mb-[8px] !h-[19px]">
                   開始
@@ -116,7 +117,7 @@ export const DaySchedule = ({
                 <Button
                   type="button"
                   onClick={() => onRemoveSlot(index)}
-                  className="px-[26px] py-[9px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] hover:text-white cursor-pointer w-[177px] font-bold h-[36px]"
+                  className="px-[26px] py-[9px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] hover:text-white cursor-pointer w-[177px] cursor-pointer font-bold h-[36px]"
                 >
                   削除
                 </Button>
@@ -124,7 +125,7 @@ export const DaySchedule = ({
                 <Button
                   type="button"
                   onClick={onAddSlot}
-                  className="px-[26px] py-[9px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] hover:text-white cursor-pointer w-[177px] font-bold h-[36px]"
+                  className="px-[26px] py-[9px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] hover:text-white cursor-pointer w-[177px] cursor-pointer font-bold h-[36px]"
                 >
                   追加
                 </Button>

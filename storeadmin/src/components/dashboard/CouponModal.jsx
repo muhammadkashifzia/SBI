@@ -62,7 +62,7 @@ const CouponModal = ({ coupon, onClose, onSave, isProfileComplete }) => {
         <div className="flex justify-center">
           <Button
             type="submit"
-            className="bg-[#006BA6] w-[300px] h-[36px] text-white"
+            className="bg-[#006BA6] rounded-[4px] w-[300px] h-[36px] text-white cursor-pointer"
             disabled={!isProfileComplete}
           >
             保存
