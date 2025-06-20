@@ -7,9 +7,9 @@ export default function About() {
         <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[20px]">
           ユーザー向け使用方法
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[34px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px]  bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[207px] md:h-[243px]  bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-01.png"
                 alt="NFT"
@@ -22,7 +22,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[207px] md:h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-02.png"
                 alt="Shopping"
@@ -35,7 +35,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
+            <div className="w-full h-[207px] md:h-[243px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
               <img
                 src="/assets/images/instructor-image-03.png"
                 alt="Purchase"
@@ -51,7 +51,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[207px] md:h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-04.png"
                 alt="QR Code"
@@ -67,7 +67,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[207px] md:h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-05.png"
                 alt="Verification"
@@ -81,7 +81,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full h-[207px] md:h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/instructor-image-06.png"
                 alt="Receipt"
@@ -125,7 +125,7 @@ export default function About() {
               <img
                 src="/assets/images/instructor-image-01.png"
                 alt="NFT"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-[207px]  rounded-[5px]  md:h-[336px] object-cover"
               />
             </div>
           </div>
@@ -133,24 +133,24 @@ export default function About() {
             <h2 className="font-bold text-[20px] mb-[20px] ">
               対象のトークン/NFT
             </h2>
-            <div className="flex space-x-[20px] flex-wrap gap-y-[20px]">
-              <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
+            <div className="flex space-x-[10px] md:space-x-[20px] flex-wrap gap-y-[20px] justify-center md:justify-start">
+              <button className="btn text-white bg-[#006BA6] w-full max-w-[188px] md:max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
                リンク A
               </button>
-              <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
+              <button className="btn text-white bg-[#006BA6] w-full max-w-[188px] md:max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
                 リンク B
               </button>
-              <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
+              <button className="btn text-white bg-[#006BA6] w-full max-w-[188px] md:max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
                 リンク C
               </button>
-              <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
+              <button className="btn text-white bg-[#006BA6] w-full max-w-[188px] md:max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
                リンク D
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-[100px]">
+      <div className="mt-[40px] md:mt-[100px]">
         <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px] mb-[40px] md:mb-[0px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
@@ -186,7 +186,7 @@ export default function About() {
             <img
               src="/assets/images/instructor-image-02.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px]  rounded-[5px]  md:h-[336px] object-cover"
             />
           </div>
         </div>
@@ -214,7 +214,7 @@ export default function About() {
             <img
               src="/assets/images/instructor-image-03.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px]  rounded-[5px]  md:h-[336px] object-cover"
             />
           </div>
         </div>
@@ -238,11 +238,11 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex-1 w-full md:max-w-[599.2px]">
+          <div className="flex-1 w-full md:max-w-[599.2px] ">
             <img
               src="/assets/images/instructor-image-04.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px]  rounded-[5px]  md:h-[336px] object-cover"
             />
           </div>
         </div>
@@ -274,7 +274,7 @@ export default function About() {
             <img
               src="/assets/images/instructor-image-05.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px]  rounded-[5px]  md:h-[336px] object-cover"
             />
           </div>
         </div>
@@ -300,7 +300,7 @@ export default function About() {
             <img
               src="/assets/images/instructor-image-06.png"
               alt="NFT"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[207px]  rounded-[5px]  md:h-[336px] object-cover"
             />
           </div>
         </div>
