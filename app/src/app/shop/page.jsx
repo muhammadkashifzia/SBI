@@ -10,7 +10,7 @@ export default function About() {
       <CustomerStepsComponent />
       <div className="mt-[20px] md:mt-[50px] ">
         <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px] mb-[20px]">
-          <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
+          <div className="flex-1 space-y-0 md:space-y-4  mt-[15px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
                 <span className="w-[80px] h-[80px] bg-[#9F8C5B] flex rounded-full text-white justify-center items-center font-bold text-[18px]">
@@ -127,7 +127,7 @@ export default function About() {
       <div className="mt-[40px] md:mt-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/check-image01.jpg"
                 alt="NFT"
@@ -140,7 +140,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full  bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/check-image01.jpg"
                 alt="Shopping"
@@ -153,7 +153,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[248px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
+            <div className="w-full bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
               <img
                 src="/assets/images/check-image.jpg"
                 alt="Purchase"

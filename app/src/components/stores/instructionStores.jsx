@@ -15,7 +15,7 @@ export default function UseInStoresComponent() {
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
                     point 1
                   </h2>
-                  <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     使用料は無料でリスク無く送客が受けられる
                   </h3>
                   <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal mb-0">
@@ -56,7 +56,7 @@ export default function UseInStoresComponent() {
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
                     point 2
                   </h2>
-                  <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     専用端末の設置は不要でQRコードを設置するだけ
                   </h3>
                   <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
@@ -79,7 +79,7 @@ export default function UseInStoresComponent() {
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
                     point 3
                   </h2>
-                  <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     Web３の知識は一切不要
                   </h3>
                   <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">

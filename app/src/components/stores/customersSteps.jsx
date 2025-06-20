@@ -2,16 +2,16 @@ export default function CustomerStepsComponent() {
   return (
    <div>
   <div className="mt-[78px] md:mt-[67px]">
-        <h1 className="text-[24px] md:text-[28px] font-bold mb-[20px] md:mb-[31px] text-center">
+        <h1 className="text-[28px] font-bold mb-[20px] md:mb-[31px] text-center">
           ３ステップで集客開始
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-x-[30px] gap-y-[20px] md:gap-y-[34px]">
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full  bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/customer-image01.png"
                 alt="NFT"
-                className="w-full h-full rounded-t-[5px] object-cover object-top"
+                className="w-full h-[207px] md:h-[336px] rounded-t-[5px] object-cover object-top"
               />
             </div>
             <div className="px-[15px] pb-[15px]">
@@ -20,11 +20,11 @@ export default function CustomerStepsComponent() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px]">
+            <div className="w-full  bg-gray-200 flex justify-center items-center mb-[10px]">
               <img
                 src="/assets/images/customer-image02.png"
                 alt="Shopping"
-                className="w-full h-full rounded-t-[5px] object-cover object-top"
+                className="w-full h-[207px] md:h-[336px] rounded-t-[5px] object-cover object-top"
               />
             </div>
             <div className="px-[15px] pb-[15px]">
@@ -33,11 +33,11 @@ export default function CustomerStepsComponent() {
             </div>
           </div>
           <div className="flex flex-col border border-[#C1C1C1] rounded-[5px]">
-            <div className="w-full h-[243px] bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
+            <div className="w-full  bg-gray-200 flex justify-center items-center mb-[10px] rounded-t-[5px]">
               <img
                 src="/assets/images/customer-image03.png"
                 alt="Purchase"
-                className="w-full h-full rounded-t-[5px] object-cover object-top"
+                className="w-full h-[207px] md:h-[336px] rounded-t-[5px] object-cover object-top"
               />
             </div>
 
