@@ -2,7 +2,7 @@
 
 import React from 'react';
 import HeroSlider from '@/components/hometwo/HeroSlider';
-import SearchForm from '@/components/hometwo/SearchForm';
+import SearchForm from '@/components/searchfilter/SearchForm';
 
 const MainHeroSlider = () => {
   return (

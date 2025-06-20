@@ -1,8 +1,8 @@
 // components/LocationDropdown.js
 import React, { useState, useRef, useEffect } from 'react';
-import RegionSelection from './RegionSelection';
-import PrefectureSelection from './PrefectureSelection';
-import AreaSelection from './AreaSelection';
+import RegionSelection from '../map/RegionSelection';
+import PrefectureSelection from '../map/PrefectureSelection';
+import AreaSelection from '../map/AreaSelection';
 import { locationData } from '../../data/locationData';
 
 const LocationDropdown = ({ 

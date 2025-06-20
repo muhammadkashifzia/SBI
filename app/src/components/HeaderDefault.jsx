@@ -31,7 +31,7 @@ export default function Sidebar() {
             alt="Logo"
             width={69}
             height={24}
-            className="w-[132.92px] h-[56px] md:w-[132.92px] md:h-[56px]"
+            className="w-[132.92px] h-[56px] md:w-[132.92px] md:h-[56px] object-cover"
           />
         </Link>
         <div className="hidden lg:flex w-full gap-[30px] justify-end custom-link">

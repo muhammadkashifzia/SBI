@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function About() {
   return (
-    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px]">
+    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px] mt-[30px]">
       <div>
         <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[20px]">
           ユーザー向け使用方法
@@ -16,7 +16,7 @@ export default function About() {
                 className="w-full h-full rounded-t-[5px] object-cover object-top"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 1</h2>
               <p className="font-normal text-[16px]">取引所でNFTを購入</p>
             </div>
@@ -29,7 +29,7 @@ export default function About() {
                 className="w-full h-full rounded-t-[5px] object-cover object-top"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 2</h2>
               <p className="font-normal text-[16px]">前列の商品を選択</p>
             </div>
@@ -43,7 +43,7 @@ export default function About() {
               />
             </div>
 
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 3</h2>
               <p className="font-normal text-[16px]">
                 対象の商品/サービスを購入
@@ -59,7 +59,7 @@ export default function About() {
               />
             </div>
 
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 4</h2>
               <p className="font-normal text-[16px]">
                 QRコードからウォレット連携
@@ -75,7 +75,7 @@ export default function About() {
               />
             </div>
 
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 5</h2>
               <p className="font-normal text-[16px]">認証画面を提示</p>
             </div>
@@ -88,7 +88,7 @@ export default function About() {
                 className="w-full h-full rounded-t-[5px] object-cover object-top"
               />
             </div>
-            <div className="pt-[10px] px-[15px] pb-[15px]">
+            <div className="px-[15px] pb-[15px]">
               <h2 className="font-medium text-[16px] mb-[10px]">Step 6</h2>
               <p className="font-normal text-[16px]">割引を受ける</p>
             </div>
@@ -135,16 +135,16 @@ export default function About() {
             </h2>
             <div className="flex space-x-[20px] flex-wrap gap-y-[20px]">
               <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
-                Link A
+               リンク A
               </button>
               <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
-                Link B
+                リンク B
               </button>
               <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
-                Link C
+                リンク C
               </button>
               <button className="btn text-white bg-[#006BA6] w-full max-w-[220px] h-[52px] p-[16px] rounded-[4px] flex justify-center items-center text-[16px] font-bold">
-                Link D
+               リンク D
               </button>
             </div>
           </div>

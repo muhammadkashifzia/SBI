@@ -1,10 +1,10 @@
 import React from 'react';
 import HeroSlider from '@/components/MainHeroSlider';
-import MapCategory from '@/components/hometwo/MapWithCategories';
-import BrowseCategory from '@/components/hometwo/BrowseCategory';
+import MapCategory from '@/components/map/MapWithCategories';
+import BrowseCategory from '@/components/map/BrowseCategory';
 import Restaurant from '@/components/hometwo/Restauarant';
 import AreaGrid from '@/components/area/areaCard';
-import AreaList from '@/components/hometwo/AreaList';
+import AreaList from '@/components/area/AreaList';
 export default function About() {
   return (
     <div>

@@ -1,7 +1,7 @@
 // components/ReviewSearchInput.js
 import React, { useRef, useEffect } from 'react';
-import ReviewDropdown from '@/components/hometwo/ReviewDropdown';
-import FilterTag from '@/components/hometwo/FilterTag';
+import ReviewDropdown from '@/components/searchfilter/ReviewDropdown';
+import FilterTag from '@/components/searchfilter/FilterTag';
 
 const ReviewSearchInput = ({
   placeholder,
