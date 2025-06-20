@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import SearchInput from './SearchInput';
 import LocationInput from './LocationInput';
 import ReviewSearchInput from './ReviewSearchInput';
+import CategorySearchInput from './CategorySearchInput';
 
 const SearchForm = () => {
   const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
@@ -11,6 +12,9 @@ const SearchForm = () => {
   const [isReviewDropdownOpen, setIsReviewDropdownOpen] = useState(false);
   const [minRating, setMinRating] = useState(0);
   const [maxRating, setMaxRating] = useState(5);
+  const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState(false);
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedSubCategories, setSelectedSubCategories] = useState([]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -19,6 +23,9 @@ const SearchForm = () => {
       }
       if (!event.target.closest('.review-input-container')) {
         setIsReviewDropdownOpen(false);
+      }
+      if (!event.target.closest('.category-input-container')) {
+        setIsCategoryDropdownOpen(false);
       }
     };
 
@@ -34,6 +41,10 @@ const SearchForm = () => {
     setIsReviewDropdownOpen(!isReviewDropdownOpen);
   };
 
+  const handleCategoryInputClick = () => {
+    setIsCategoryDropdownOpen(!isCategoryDropdownOpen);
+  };
+
   const handleLocationSelect = (locationText, tags) => {
     setLocationValue(locationText);
     setLocationTags(tags);
@@ -42,6 +53,11 @@ const SearchForm = () => {
   const handleRatingSelect = (min, max) => {
     setMinRating(min);
     setMaxRating(max);
+  };
+
+  const handleCategorySelect = (categories, subCategories) => {
+    setSelectedCategories(categories);
+    setSelectedSubCategories(subCategories);
   };
 
   const handleTagRemove = (tagToRemove) => {
@@ -67,6 +83,10 @@ const SearchForm = () => {
 
   const handleReviewDropdownClose = () => {
     setIsReviewDropdownOpen(false);
+  };
+
+  const handleCategoryDropdownClose = () => {
+    setIsCategoryDropdownOpen(false);
   };
 
   return (
@@ -95,12 +115,18 @@ const SearchForm = () => {
         </div>
 
         {/* Category Search */}
-        <SearchInput
+        <CategorySearchInput
           placeholder="カテゴリ―"
           iconSrc="/assets/svg/knife-icon.svg"
           iconAlt="knifeIcon"
           iconWidth={31}
           iconHeight={32}
+          isDropdownOpen={isCategoryDropdownOpen}
+          onInputClick={handleCategoryInputClick}
+          selectedCategories={selectedCategories}
+          selectedSubCategories={selectedSubCategories}
+          onCategorySelect={handleCategorySelect}
+          onDropdownClose={handleCategoryDropdownClose}
         />
 
         {/* Star Rating Search */}

@@ -38,7 +38,7 @@ const LocationInput = ({
       <div className="flex-10/12 relative h-full cursor-pointer z-50" onClick={onInputClick}>
         {/* Placeholder text - shown when no tags and no location value */}
         {locationTags.length === 0 && !locationValue && (
-          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#2C3237] pointer-events-none z-0">
+          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 text-[#2C3237] pointer-events-none z-0 text-[20px] font-normal">
             場所/エリア
           </div>
         )}
@@ -73,7 +73,7 @@ const LocationInput = ({
           type="text"
           value=""
           readOnly
-          className="w-full h-full outline-none cursor-pointer absolute top-0 left-0 bg-transparent -z-10 opacity-0"
+          className="w-full h-full outline-none cursor-pointer absolute top-0 left-0 bg-transparent -z-10 opacity-0 text-[#2C3237] font-normal text-[20px]"
         />
       </div>
 

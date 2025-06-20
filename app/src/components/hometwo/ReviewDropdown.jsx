@@ -42,7 +42,7 @@ const ReviewDropdown = ({
   if (!isOpen) return null;
 
   return (
-    <div className="absolute top-full left-0 right-0 bg-white border border-[#DDDDDD] rounded-[5px] shadow-lg z-10 mt-1 w-[40%] ml-auto leading-[24px] mb-[24px]">
+    <div className="absolute top-full left-0 right-0 bg-white border border-[#DDDDDD] rounded-[5px] shadow-lg z-10 mt-1 w-full md:w-[40%] ml-auto leading-[24px] mb-[24px]">
       <div className="p-4">
         <h3 className="text-[20px] font-bold mb-4 text-[#212121]">Rating Range</h3>
         
@@ -58,7 +58,7 @@ const ReviewDropdown = ({
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               {starOptions.map((option) => (
-                <option key={option.value} value={option.value}>
+                <option className='border-b border-[#E6E6E6]' key={option.value} value={option.value}>
                   {option.label}
                 </option>
               ))}

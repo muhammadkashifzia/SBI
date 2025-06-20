@@ -932,7 +932,7 @@ export default function MapWithCategories() {
             <h3 className="text-sm font-medium text-[#070707] mb-[15px] border border-[#E6E6E6] rounded-[4px] py-[12.5px] px-[10px]">
               エリアの検索
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[10px]">
+            <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-y-[20px] gap-x-[10px]">
               {prefectureData[selectedPrefecture]?.cities.map((city, index) => (
                 <label
                   key={index}

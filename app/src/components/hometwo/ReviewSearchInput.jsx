@@ -1,6 +1,7 @@
 // components/ReviewSearchInput.js
 import React, { useRef, useEffect } from 'react';
-import ReviewDropdown from './ReviewDropdown';
+import ReviewDropdown from '@/components/hometwo/ReviewDropdown';
+import FilterTag from '@/components/hometwo/FilterTag';
 
 const ReviewSearchInput = ({
   placeholder,
@@ -37,7 +38,16 @@ const ReviewSearchInput = ({
     if (selectedMinRating === 0 && selectedMaxRating === 5) {
       return '';
     }
-    return `星 ${selectedMinRating} 〜 星 ${selectedMaxRating}`;
+    return `星 ${selectedMinRating}~ 星${selectedMaxRating}`;
+  };
+
+  const hasSelection = () => {
+    return !(selectedMinRating === 0 && selectedMaxRating === 5);
+  };
+
+  const handleTagRemove = (e) => {
+    e.stopPropagation();
+    onRatingSelect(0, 5); // Reset to default values
   };
 
   return (
@@ -55,14 +65,26 @@ const ReviewSearchInput = ({
             className="flex-shrink-0"
           />
           <div className="flex-1">
-            <input
-              type="text"
-              placeholder={placeholder}
-              value={getDisplayValue()}
-              readOnly
-              className="w-full text-[20px] text-[#606060] placeholder:text-[#BEBEBE] bg-transparent outline-none cursor-pointer"
-            />
+            {hasSelection() ? (
+              <div className="flex flex-wrap gap-2">
+                <FilterTag
+                  icon={iconSrc}
+                  iconAlt={iconAlt}
+                  text={getDisplayValue()}
+                  onRemove={handleTagRemove}
+                />
+              </div>
+            ) : (
+              <input
+                type="text"
+                placeholder={placeholder}
+                value=""
+                readOnly
+                className="w-full text-[20px] text-[#606060] placeholder:text-[#2C3237] bg-transparent outline-none cursor-pointer font-normal"
+              />
+            )}
           </div>
+         
         </div>
       </div>
 
