@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 export default function About() {
   return (
-    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px] mt-[30px]">
+    <div className="container mx-auto px-[16px] mb-[47px] md:mb-[85px] mt-[20px] md:mt-[30px]">
       <div>
         <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[20px]">
           ユーザー向け使用方法
@@ -151,7 +151,7 @@ export default function About() {
         </div>
       </div>
       <div className="mt-[100px]">
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse  md:pb-[50px] mb-[40px] md:mb-[0px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -190,7 +190,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px] mb-[40px] md:mb-[0px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -218,7 +218,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px] mb-[40px] md:mb-[0px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -246,7 +246,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px] mb-[40px] md:mb-[0px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -278,7 +278,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px]">
+        <div className="flex md:space-x-6 md:flex-row flex-col-reverse md:py-[50px] mb-[40px] md:mb-[0px]">
           <div className="flex-1 space-y-0 md:space-y-4  mt-[20px] md:mt-0 m-x-0">
             <div className="flex gap-[30px]">
               <div>
@@ -306,17 +306,16 @@ export default function About() {
         </div>
       </div>
       <div
-        className="h-full mt-[4px] rounded-[5px] bg-cover bg-no-repeat bg-center relative  overflow-hidden  flex flex-col justify-center py-[103px] md:py-[100px] w-full max-w-[1359px] mx-auto px-[16px]"
+        className="h-full mt-[4px] rounded-[5px] bg-cover bg-no-repeat bg-center relative  overflow-hidden  flex flex-col justify-center py-[143px] md:py-[100px] w-full max-w-[1359px] mx-auto px-[16px]"
         style={{
           backgroundImage: `linear-gradient(0deg, rgba(0, 81, 158, 0.8), rgba(0, 81, 158, 0.8)), url('/assets/images/instructor-image-02.png')`,
           backgroundColor: 'lightgray',
         }}
       >
         <div>
-          <div className="py-[40px] text-center absolute top-1/2 left-[50%] transform -translate-y-1/2 -translate-x-1/2 text-white font-bold text-sm space-y-1">
+          <div className="py-[40px] text-center absolute top-1/2 left-[50%] transform -translate-y-1/2 -translate-x-1/2 text-white font-bold text-sm space-y-1 w-full">
             <h3 className="font-bold text-[16px] md:text-[30px] leading-[38px] mb-[27px]">
-              ※使用方法につきまして質問等がございましたらBto3
-              ディスコードの「🎟support」チャンネルよりご連絡ください。
+         ※使用方法につきまして質問等がございましたらBto3 ディスコードの「🎟support」チャンネルよりご連絡ください。
             </h3>
             <p>
               <a
