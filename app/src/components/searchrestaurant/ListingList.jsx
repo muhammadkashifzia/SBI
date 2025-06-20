@@ -87,7 +87,7 @@ export default function ListingList() {
 
   return (
     <main className="flex-1">
-      <div className="flex justify-between items-center mb-[20px]">
+      <div className="flex justify-start md:justify-between items-start md:items-center mb-[20px] flex-col md:flex-row gap-y-[30px]">
         <h2 className="text-[24px] font-bold text-[#2C3237]">
           検索結果 {filteredItems.length}件
         </h2>
