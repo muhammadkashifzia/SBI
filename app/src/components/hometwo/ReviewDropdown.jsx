@@ -87,7 +87,7 @@ const ReviewDropdown = ({
         {/* Apply Button */}
         <button
           onClick={handleApply}
-          className="w-full bg-[#006BA6] text-white py-2 px-4 rounded hover:bg-[#005a8a] transition-colors duration-200 font-medium max-w-[179px] flex ml-auto justify-center items-center"
+          className="cursor-pointer w-full bg-[#006BA6] text-white py-2 px-4 rounded hover:bg-[#005a8a] transition-colors duration-200 font-medium max-w-[179px] flex ml-auto justify-center items-center"
         >
           Apply
         </button>
