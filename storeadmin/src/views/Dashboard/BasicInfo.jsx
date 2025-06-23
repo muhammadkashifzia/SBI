@@ -8,7 +8,7 @@ import {
   infolimit,
 } from "../../InputFeildData/Dhshboard/basicinfo";
 
-const DashboardHome = () => {
+const DashboardHome = ({ profileChecks, setProfileChecks }) => {
   const formik = useFormik({
     initialValues: {
       // Basic Info
@@ -52,7 +52,10 @@ const DashboardHome = () => {
       console.log("Form values:", values);
     },
   });
-
+  const handleSave = () => {
+    // validate form fields and update state
+    setProfileChecks((prev) => ({ ...prev, basicInfo: true }));
+  };
   return (
     <div>
       <form onSubmit={formik.handleSubmit}>
@@ -114,6 +117,7 @@ const DashboardHome = () => {
         <div className="mt-[20px] lg:mt-[30px] mb-[21px] flex justify-center lg:justify-start ">
           <Button
             type="submit"
+            onClick={handleSave}
             className="px-[20px] lg:px-[26px] py-[12px] lg:py-[14px] text-[15px] lg:text-[16px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] font-bold w-full max-w-[200px]"
           >
             保存

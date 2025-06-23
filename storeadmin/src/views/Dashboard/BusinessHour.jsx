@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { DaySchedule } from "../../components/dashboard/DaySchedule";
 
-const WeeklySchedule = () => {
+const WeeklySchedule = ({ profileChecks, setProfileChecks }) => {
   const days = [
     "月曜日",
     "火曜日",
@@ -80,7 +80,10 @@ const WeeklySchedule = () => {
       <div className="flex justify-start  my-[30px]">
         <Button
           type="button"
-          onClick={() => console.log(schedule)}
+          onClick={() => {
+            console.log(schedule);
+            setProfileChecks({ ...profileChecks, businessHours: true });
+          }}
           className="bg-[#006BA6] cursor-pointer hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] !h-[50px]"
         >
           保存

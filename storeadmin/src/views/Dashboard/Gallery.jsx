@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import UploadBox from "../../components/dashboard/ImageUpload";
 
-export default function ParentComponent() {
+export default function ParentComponent({ profileChecks, setProfileChecks }) {
   const [uploadedImages, setUploadedImages] = useState([]);
-
+console.log(profileChecks, setProfileChecks)
   const handleUpload = ({ file, category }) => {
     const newImage = {
       url: URL.createObjectURL(file),
@@ -19,10 +19,13 @@ export default function ParentComponent() {
   return (
     <div>
       <UploadBox
-        onUpload={handleUpload}
-        uploadedImages={uploadedImages}
-        onDelete={handleDelete}
-      />
+  onUpload={handleUpload}
+  uploadedImages={uploadedImages}
+  onDelete={handleDelete}
+  profileChecks={profileChecks}
+  setProfileChecks={setProfileChecks}
+/>
+
     </div>
   );
 }

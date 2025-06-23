@@ -5,7 +5,13 @@ import CategorySelect from "./CategorySelect";
 import ImageCard from "./ImageCard";
 import DeleteConfirmModal from "../../components/shared/DeleteConfirmModal";
 
-export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
+export default function UploadBox({
+  onUpload,
+  uploadedImages,
+  onDelete,
+  profileChecks,
+  setProfileChecks,
+}) {
   const [file, setFile] = useState(null);
   const [category, setCategory] = useState("");
   const [deleteIndex, setDeleteIndex] = useState(null);
@@ -49,7 +55,9 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
                 alt="Upload Icon"
                 className="w-[48px] h-[48px]"
               />
-              <div className="text-[#006BA6] pt-[18px]">クリックしてアップロード</div>
+              <div className="text-[#006BA6] pt-[18px]">
+                クリックしてアップロード
+              </div>
               <div>ドラッグ＆ドロップ JPG, JPEG, PNGファイル</div>
             </label>
 
@@ -130,7 +138,10 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
       <div className="flex justify-start my-[30px] ">
         <Button
           type="button"
-          onClick={() => console.log("Saving...")}
+          onClick={() => {
+            console.log("Saving...");
+            setProfileChecks({ ...profileChecks, gallery: true });
+          }}
           className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] h-[50px] font-bold"
         >
           保存
