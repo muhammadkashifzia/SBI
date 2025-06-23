@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import RestaurantGallery from '@/components/restaurant/restaurantGellery'
+import RestaurantGallery from '@/components/restaurant/restaurantGallery'
 import RecommendedProducts from '@/components/restaurant/recommendedProducts'
 import ShopInfo from '@/components/restaurant/shopInfo'
 import CopounCard from '@/components/restaurant/copounCard'
