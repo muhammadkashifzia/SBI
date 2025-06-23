@@ -1,13 +1,11 @@
-// src/pages/Reviews.jsx
-import React from "react";
-import Sidebar from "../../components/shared/Sidebar";
+import DashboardLayout from "../DashboardLayout";
+import ReviewsComponent from "../../views/Setting/page";
 
 const Reviews = () => {
   return (
-    <div className="flex">
-      <Sidebar />
-      <main className="flex-1 p-6 bg-gray-50">レビュー管理ページ</main>
-    </div>
+    <DashboardLayout>
+      <ReviewsComponent />
+    </DashboardLayout>
   );
 };
 

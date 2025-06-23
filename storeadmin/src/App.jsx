@@ -4,7 +4,7 @@ import Login from "./pages/auth/Login";
 import ForgetPassword from "./pages/auth/ForgetPassword";
 import OtpVerify from "./pages/auth/OtpVerify";
 import AccountCreated from "./pages/auth/AccountCreated";
-import Dashboard from "./pages/dashboard/DashboardLayout";
+import Dashboard from "./pages/dashboard/Dashboard";
 import Reviews from "./pages/dashboard/Reviews";
 import Settings from "./pages/dashboard/Settings";
 function App() {
