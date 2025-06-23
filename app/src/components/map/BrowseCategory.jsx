@@ -5,7 +5,7 @@ export default function BrowseCategory() {
     <div className="mt-[100px]">
       <div className="text-left mb-[23px]">
         <h1 className="text-[32px] font-bold text-[#2C3237]">
-          カテゴリから探す
+          カテゴリーから探す
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[33px]">
