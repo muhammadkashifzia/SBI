@@ -3,7 +3,7 @@ import HeroSlider from '@/components/MainHeroSlider';
 import MapCategory from '@/components/map/MapWithCategories';
 import BrowseCategory from '@/components/map/BrowseCategory';
 import Restaurant from '@/components/hometwo/Restauarant';
-import AreaGrid from '@/components/area/areaCard';
+import AreaGrid from '@/components/area/AreaCard';
 import AreaList from '@/components/area/AreaList';
 export default function About() {
   return (

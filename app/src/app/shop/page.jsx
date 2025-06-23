@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import UseInStoresComponent from '@/components/stores/instructionStores';
 import CustomerStepsComponent from '@/components/stores/customersSteps';
-import RegisterBannerComponent from '@/components/banner/registerBanner';
+import RegisterBannerComponent from '@/components/banner/RegisterBanner';
 export default function About() {
   return (
     <div className="container mx-auto px-[16px] mb-[43px] md:mb-[100px] mt-[30px]">
