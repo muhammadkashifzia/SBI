@@ -1,12 +1,36 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import AnnouncementModal from '@/components/notice/noticeModal';
+import React, { useEffect, useState } from 'react';
 
 export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
+  const pathname = usePathname();
+  
   if (!sidebarOpen) return null;
 
   const handleCloseSidebar = () => {
     setSidebarOpen(false);
+  };
+  
+  const [showModal, setShowModal] = useState(false);
+  
+  // Helper function to determine if a link is active
+  const isActiveLink = (href) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(href);
+  };
+  
+  // Helper function to get link classes
+  const getLinkClasses = (href) => {
+    const baseClasses = "cursor-pointer py-[15px] px-[10px] rounded-[4px] w-full block";
+    const activeClasses = "bg-[#006BA6] text-white";
+    const inactiveClasses = "bg-white text-[#070707]";
+    
+    return `${baseClasses} ${isActiveLink(href) ? activeClasses : inactiveClasses}`;
   };
 
   return (
@@ -54,7 +78,7 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 <li className="w-full">
                   <Link
                     href="/"
-                    className="cursor-pointer bg-[#006BA6]  py-[15px] px-[10px] rounded-[4px] text-white w-full block"
+                    className={getLinkClasses('/')}
                     onClick={handleCloseSidebar}
                   >
                     ホーム
@@ -63,7 +87,7 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 <li className="w-full">
                   <Link
                     href="/about"
-                    className="cursor-pointer bg-white py-[15px] px-[10px] rounded-[4px] w-full block"
+                    className={getLinkClasses('/about')}
                     onClick={handleCloseSidebar}
                   >
                     Web3 割について
@@ -71,8 +95,8 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 </li>
                 <li className="w-full">
                   <Link
-                    href="/about"
-                    className="cursor-pointer bg-white py-[15px] px-[10px] rounded-[4px] w-full block"
+                    href="/shop"
+                    className={getLinkClasses('/shop-listing')}
                     onClick={handleCloseSidebar}
                   >
                     店舗無料掲載希望
@@ -83,7 +107,7 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
 
             <div className="flex flex-col gap-[8px] mb-[32px]">
               <Link
-                href="/login"
+                href="/auth/login"
                 onClick={handleCloseSidebar}
                 className="w-full bg-[#006BA6] border border-[#006BA6] text-[#ffffff] font-semibold py-2 rounded flex justify-center items-center space-x-2"
               >
@@ -92,15 +116,19 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 </span>
               </Link>
               <Link
-                href="/register"
+                href="/auth/signin"
                 onClick={handleCloseSidebar}
                 className="w-full bg-[#006BA6] text-white py-2 rounded flex justify-center items-center space-x-2"
               >
                 店舗向けログイン
               </Link>
-              <Link
-                href="/register"
-                onClick={handleCloseSidebar}
+              <button
+                onClick={() => {
+                  setShowModal(true);
+                  setTimeout(() => {
+                    handleCloseSidebar();
+                  }, 100);
+                }}
                 className="relative w-full bg-[#ffffff] text-[#070707] py-2 rounded flex justify-center items-center space-x-2"
               >
                 <div className="absolute left-[10px] top-[50%] transform -translate-y-1/2">
@@ -114,11 +142,15 @@ export default function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 </div>
                 お知らせ
                 <span className="inline-block w-[7px] h-[7px] bg-[#FF0000] rounded-full absolute top-[50%] transform -translate-y-1/2  right-[10px]"></span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       )}
+      <AnnouncementModal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+      />
     </>
   );
 }

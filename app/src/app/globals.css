@@ -18,3 +18,72 @@ font-size: 28px;
 font-weight: 900;
 color:#006BA6;
 }
+
+.modal-gallery-slider .swiper-button-next, .modal-gallery-slider .swiper-button-prev{
+  color:#fff;
+}
+@media screen and (min-device-width: 769px) and (max-device-width: 1200px) { 
+     .location-search, .filter-search {
+         gap: 5px;
+    }
+    .header-btn, .custom-link{
+         gap: 10px;
+    }
+
+}
+@media screen and (min-device-width: 768px) and (max-device-width:1050px) { 
+  .chubu-region{
+       width: 135px;
+       left: 50%;
+       top:35%;
+  }
+  .chugoku-region{
+      width: 135px;
+      left: 16%;
+  }
+  .hokkaido-region{
+       width: 135px;
+       top: 2%;
+       right: 4%;
+  }
+  .tohoku-region{
+      width: 135px;
+  }
+  .kyushu-region{
+     width: 135px;
+     left: 6%;
+  }
+  .shikoku-region{
+     width: 135px;
+     bottom: 6%;
+  }
+  .kinki-region{
+    width: 135px;
+    bottom: 10%;
+
+  }
+  .kanto-region{
+      width: 135px;
+      left: 78%;
+  }
+.tohoku-region{
+  top: 34%;
+  right: 5%;
+  width: 135px;
+}
+}
+@media screen and (min-device-width: 600px) and (max-device-width:767px) { 
+.tohoku-region{
+  right: 0%;
+  width: 100px;
+}
+}
+
+
+@media screen and (min-device-width: 1020px) and (max-device-width:1100px) { 
+.tohoku-region{
+  right: 10%;
+  width: 150px;
+}
+}
+

@@ -1,6 +1,6 @@
 // components/AreaGrid.tsx
 import Image from 'next/image';
-
+import Link from 'next/link';
 const areas = [
   { name: '東京', image: '/assets/images/tokyo.png' },
   { name: '神奈川', image: '/assets/images/kanagawa.png' },
@@ -16,7 +16,7 @@ export default function AreaGrid() {
       <h2 className="text-[24px] md:text-[32px] font-bold mb-5 text-[#2C3237]">エリアから探す</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-[32px] gap-y-[31px]">
         {areas.map((area) => (
-          <div key={area.name} className="relative group overflow-hidden rounded-[5px] shadow-lg cursor-pointer">
+          <Link href="/restaurants" key={area.name} className="relative group overflow-hidden rounded-[5px] shadow-lg cursor-pointer">
             <Image
               src={area.image}
               alt={area.name}
@@ -27,7 +27,7 @@ export default function AreaGrid() {
             <div className="absolute inset-0  flex items-center justify-center">
               <span className="text-white text-[32px] font-medium">{area.name}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

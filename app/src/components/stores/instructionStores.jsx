@@ -2,7 +2,7 @@ export default function UseInStoresComponent() {
   return (
     <div>
       <div>
-        <h1 className="text-[24px] md:text-[28px] font-semibold mb-[15px] md:mb-[19.5px] text-[#2C3237]">
+        <h1 className="text-[24px] md:text-[28px] font-bold mb-[15px] md:mb-[20px] text-[#2C3237]">
           店舗向け使用方法
         </h1>
       </div>
@@ -15,7 +15,7 @@ export default function UseInStoresComponent() {
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
                     point 1
                   </h2>
-                  <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     使用料は無料でリスク無く送客が受けられる
                   </h3>
                   <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal mb-0">
@@ -34,20 +34,20 @@ export default function UseInStoresComponent() {
               <img
                 src="/assets/images/store-image.png"
                 alt="NFT"
-                className="w-full h-full object-cover rounded-[5px]"
+                className="w-full h-[207px] md:h-[335px] object-cover rounded-[5px]"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-[0px] md:mt-[100px]">
+      <div className="mt-[0px] md:mt-[36px]">
         <div className="overflow-hidden">
           <div className="flex md:space-x-6 md:flex-row flex-col mb-[40px] md:mb-[30px]">
             <div className="flex-1 w-full md:max-w-[599px] mt-[40px] md:mt-0">
               <img
                 src="/assets/images/store-image02.jpg"
                 alt="NFT"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-[207px] md:h-[335px] object-cover rounded-lg"
               />
             </div>
             <div className="flex-1 space-y-0 md:space-y-4  mt-[15px] md:mt-0 m-x-0">
@@ -56,7 +56,7 @@ export default function UseInStoresComponent() {
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
                     point 2
                   </h2>
-                  <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     専用端末の設置は不要でQRコードを設置するだけ
                   </h3>
                   <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
@@ -70,7 +70,7 @@ export default function UseInStoresComponent() {
           </div>
         </div>
       </div>
-      <div className="mt-[0px] md:mt-[100px]">
+      <div className="mt-[0px] md:mt-[36px]">
         <div className="overflow-hidden">
           <div className="flex md:space-x-6 md:flex-row flex-col-reverse">
             <div className="flex-1 space-y-0 md:space-y-4  mt-[15px] md:mt-0 m-x-0">
@@ -79,7 +79,7 @@ export default function UseInStoresComponent() {
                   <h2 className="text-[20px] font-bold text-[#2C3237] mb-[15px] uppercase">
                     point 3
                   </h2>
-                  <h3 className="text-[20px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
+                  <h3 className="text-[18px] md:text-[20px] leading-[32px] font-bold text-[#2C3237] mb-[20px]">
                     Web３の知識は一切不要
                   </h3>
                   <p className="text-[#2C3237] text-[16px] leading-[22px] font-normal">
@@ -96,7 +96,7 @@ export default function UseInStoresComponent() {
               <img
                 src="/assets/images/store-image03.png"
                 alt="NFT"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-[207px] md:h-[335px] object-cover rounded-lg"
               />
             </div>
           </div>
