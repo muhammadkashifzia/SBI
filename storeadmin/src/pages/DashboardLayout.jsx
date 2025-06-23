@@ -9,7 +9,7 @@ const DashboardLayout = ({ children }) => {
     <div className="relative min-h-screen lg:flex bg-[#F3F3F3]">
       {/* Hamburger icon (for small/medium only) */}
       <button
-        className="lg:hidden fixed top-5 left-4 z-50 text-[#006BA6]"
+        className="lg:hidden fixed top-5 right-10 z-50 text-[#006BA6]"
         onClick={() => setIsSidebarOpen(true)}
       >
         <FiMenu size={28} />
@@ -19,7 +19,9 @@ const DashboardLayout = ({ children }) => {
       <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
       {/* Main Content */}
-      <main className="flex-1 px-[20px] py-[20px]">{children}</main>
+
+      
+      <main className="flex-1 px-[20px] ">{children}</main>
     </div>
   );
 };

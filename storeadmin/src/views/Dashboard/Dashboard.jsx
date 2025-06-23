@@ -24,32 +24,34 @@ const DashboardHome = () => {
   const ActiveComponent = tabComponents[activeTab];
 
   return (
-    <div>
-      <h2 className="text-[20px] font-medium p-[20px] text-[#212121] ">
+    <>
+      <h2 className="text-[20px] bg-white font-medium p-[20px] text-[#212121] ">
         店舗管理
       </h2>
-      <div className="py-[20px] px-[20px]">
-        <div className=" pb-[10px] border-b mb-[32px]">
-          <div className="flex justify-between items-center">
-            <span className="text-[#000000] text-[18px]">
-              ステータス：公開.
-            </span>
-            <Button className="px-[26px] py-[9px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] cursor-pointer w-[150px] font-bold">
-              非公開にする{" "}
-            </Button>
+      <div className=" py-[20px]">
+        <div className="px-[20px] pt-[20px] bg-white">
+          <div className=" pb-[10px] border-b ">
+            <div className="flex justify-between items-center">
+              <span className="text-[#000000] text-[18px]">
+                ステータス：公開.
+              </span>
+              <Button className="px-[26px] py-[9px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] cursor-pointer w-[150px] font-bold">
+                非公開にする{" "}
+              </Button>
+            </div>
           </div>
-        </div>
 
-        <TopNavBar
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-          tabs={tabs}
-        />
+          <TopNavBar
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            tabs={tabs}
+          />
+        </div>
+        <div className="  rounded ">
+          <ActiveComponent />
+        </div>{" "}
       </div>
-      <div className="bg-white  rounded ">
-        <ActiveComponent />
-      </div>
-    </div>
+    </>
   );
 };
 

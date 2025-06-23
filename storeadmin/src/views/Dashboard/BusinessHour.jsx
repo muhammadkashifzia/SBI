@@ -49,31 +49,33 @@ const WeeklySchedule = () => {
   };
 
   return (
-    <div className="w-full  pb-[62px]">
-      {days.map((day, i) => (
-        <DaySchedule
-          key={i}
-          day={day}
-          closed={schedule[i].closed}
-          timeSlots={schedule[i].timeSlots}
-          onToggleClosed={() => handleToggleClosed(i)}
-          onChangeSlot={(index, field, value) =>
-            handleSlotChange(i, index, field, value)
-          }
-          onAddSlot={() => handleAddSlot(i)}
-          onRemoveSlot={(index) => handleRemoveSlot(i, index)}
-        />
-      ))}
+    <>
+      <div className="w-full  bg-white">
+        {days.map((day, i) => (
+          <DaySchedule
+            key={i}
+            day={day}
+            closed={schedule[i].closed}
+            timeSlots={schedule[i].timeSlots}
+            onToggleClosed={() => handleToggleClosed(i)}
+            onChangeSlot={(index, field, value) =>
+              handleSlotChange(i, index, field, value)
+            }
+            onAddSlot={() => handleAddSlot(i)}
+            onRemoveSlot={(index) => handleRemoveSlot(i, index)}
+          />
+        ))}
 
-      <div className="[&:nth-child(2)]:border-t border-[#E6E6E6]  mb-[20px] mx-[20px] pt-[40px]">
-        <Label className="text-[16px] h-[23px] font-normal text-[#2C3237] mb-[8px] block">
-          ラストオーダー時間を入力
-        </Label>
-        <Input
-          type="input"
-          placeholder="時間を入力"
-          className="h-[48px] py-[14px] px-[16px] w-full w-full max-w-[429px] h-[48px] rounded-[4px]  border border-[#E6E6E6] focus-visible:outline-none focus-visible:ring-0"
-        />
+        <div className="[&:nth-child(2)]:border-t border-[#E6E6E6]  pb-[20px] mx-[20px] pt-[40px]">
+          <Label className="text-[16px] h-[23px] font-normal text-[#2C3237] mb-[8px] block">
+            ラストオーダー時間を入力
+          </Label>
+          <Input
+            type="input"
+            placeholder="時間を入力"
+            className="h-[48px] py-[14px] px-[16px] w-full w-full max-w-[429px] h-[48px] rounded-[4px]  border border-[#E6E6E6] focus-visible:outline-none focus-visible:ring-0"
+          />
+        </div>
       </div>
       <div className="flex justify-start  my-[30px]">
         <Button
@@ -84,7 +86,7 @@ const WeeklySchedule = () => {
           保存
         </Button>
       </div>
-    </div>
+    </>
   );
 };
 

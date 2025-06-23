@@ -12,17 +12,16 @@ const ImageUploadSection = () => {
   };
 
   return (
-    <div className="grid grid-cols-2 gap-[10px] mb-[29px]">
+    <div className="grid grid-cols-1  lg:grid-cols-2 gap-[10px] ">
       {[image1, image2].map((image, index) => (
         <label
           key={index}
-          className="relative cursor-pointer  overflow-hidden w-full h-[282px]"
+          className="relative cursor-pointer overflow-hidden w-full h-[250px] lg:h-[282px] "
         >
           <input
-            type="file"   
-              className="hidden"
-
-            onChange={(e) => 
+            type="file"
+            className="hidden"
+            onChange={(e) =>
               index === 0
                 ? handleImageChange(e, setImage1)
                 : handleImageChange(e, setImage2)
@@ -43,7 +42,7 @@ const ImageUploadSection = () => {
                 <img
                   src="/svg/shared/imageupload.svg"
                   alt=""
-                  className="w-[6 0px] pb-[10px]"
+                  className="w-[60px] pb-[10px]"
                 />
                 <span className="text-[#000000] text-center bg-white font-normal px-[20px] py-[5px] rounded-[50px] max-w-[232px] text-[16px] max-h-[33px]">
                   クリックしてアップロード

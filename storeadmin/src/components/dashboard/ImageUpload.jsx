@@ -8,7 +8,7 @@ import DeleteConfirmModal from "../../components/shared/DeleteConfirmModal";
 export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
   const [file, setFile] = useState(null);
   const [category, setCategory] = useState("");
-  const [deleteIndex, setDeleteIndex] = useState(null); // NEW STATE
+  const [deleteIndex, setDeleteIndex] = useState(null);
 
   const handleFileChange = (e) => {
     if (e.target.files?.[0]) {
@@ -37,65 +37,65 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
 
   return (
     <>
-      <div className="p-[20px]">
-        <div className="p-[20px] w-full">
-          <div className="border border-dashed border-[#D4D4D4] rounded-[12px] w-full max-w-[604px] mx-auto py-[14px]">
-            <div className="mx-auto w-full rounded-[4px] flex flex-col items-center justify-center mb-[10px] cursor-pointer text-[17px] text-[#2C3237] font-bold leading-[27px]">
+      <div className="lg:p-[20px] p-[10px] lg:pt-[32px] bg-white">
+        <div className="lg:p-[20px] p-[10px] w-full">
+          <div className="border border-dashed border-[#D4D4D4] rounded-[12px] w-full max-w-[604px] mx-auto py-[14px]  px-[10px]">
+            <label
+              htmlFor="fileUpload"
+              className="cursor-pointer flex flex-col items-center justify-center text-center text-[#2C3237] lg:font-bold lg:text-[17px] text-[14px] font-medium  leading-[20px] lg:leading-[27px]"
+            >
               <img
                 src="/svg/dashboard/gallary.svg"
                 alt="Upload Icon"
                 className="w-[48px] h-[48px]"
               />
-              <div className="text-[#006BA6] pt-[18px]">
-                クリックしてアップロード
-              </div>
-              <div className="">ドラッグ＆ドロップ JPG, JPEG, PNGファイル</div>
-            </div>
-            <div className="max-w-[371px] mx-auto">
+              <div className="text-[#006BA6] pt-[18px]">クリックしてアップロード</div>
+              <div>ドラッグ＆ドロップ JPG, JPEG, PNGファイル</div>
+            </label>
+
+            <Input
+              id="fileUpload"
+              type="file"
+              accept="image/*"
+              onChange={handleFileChange}
+              className="hidden"
+            />
+
+            <div className="max-w-[371px] mx-auto w-full mt-[10px] ">
               {file && (
-                <div className="relative w-[150px] h-[84px] my-[15px] rounded-[5px] gap-[10px]">
+                <div className="relative flex flex-col sm:flex-row items-center gap-[8px] my-[15px]">
                   <img
                     src={URL.createObjectURL(file)}
                     alt="preview"
-                    className="object-cover w-full h-full max-w-[150px] max-h-[84px] mx-[20px]"
+                    className="object-cover w-[150px] h-[84px] rounded-[5px]"
                   />
-                  <div className="absolute top-1 right-[-120px]">
+                  <div className="text-[14px] text-[#2C3237] font-medium">
                     {file.name}
                   </div>
-                  <div className="absolute top-17 right-[-120px]">
+                  <button
+                    onClick={() => setFile(null)}
+                    className="absolute top-0 right-0 sm:static sm:ml-auto"
+                  >
                     <img
                       src="/svg/dashboard/delete.svg"
-                      onClick={() => setFile(null)}
                       alt="delete"
                       className="w-4 h-4"
                     />
-                  </div>
+                  </button>
                 </div>
               )}
 
-              <div className="mb-[8px]">
-                <label
-                  htmlFor="fileUpload"
-                  className="text-[#2C3237] text-[16px] cursor-pointer inline-block font-normal"
-                >
+              <div className="mb-[8px] ">
+                <label className="text-[#2C3237] lg:text-[16px] text-[12px] font-normal block">
                   写真属性を選択
                 </label>
-
-                <Input
-                  id="fileUpload"
-                  type="file"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  className="hidden !h-[48px] px-[16px] py-[14px]"
-                />
+                <CategorySelect value={category} onChange={setCategory} />
               </div>
-
-              <CategorySelect value={category} onChange={setCategory} />
 
               <div className="w-full flex justify-center mt-[10px]">
                 <Button
                   onClick={handleUpload}
-                  className="w-[150px] bg-[#006BA6] hover:bg-[#006BA6] text-white cursor-pointer font-bold rounded"
+                  className="w-[150px] bg-[#006BA6] hover:bg-[#006BA6] text-white font-bold rounded"
                 >
                   アップロード
                 </Button>
@@ -103,7 +103,9 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap gap-[30px] mt-[32px]">
+
+        {/* Uploaded Images */}
+        <div className="flex flex-wrap gap-[30px] lg:mt-[32px]">
           {uploadedImages.map((img, index) => (
             <ImageCard
               key={index}
@@ -114,19 +116,22 @@ export default function UploadBox({ onUpload, uploadedImages, onDelete }) {
             />
           ))}
         </div>
+
+        {/* Delete Confirmation Modal */}
         {deleteIndex !== null && (
           <DeleteConfirmModal
             onClose={() => setDeleteIndex(null)}
             onConfirm={handleConfirmDelete}
           />
-        )}{" "}
+        )}
       </div>
 
-      <div className="flex justify-start  my-[30px]">
+      {/* Save Button */}
+      <div className="flex justify-start my-[30px] ">
         <Button
           type="button"
-          onClick={() => console.log(schedule)}
-          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] cursor-pointer !h-[50px]"
+          onClick={() => console.log("Saving...")}
+          className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 rounded w-[150px] h-[50px] font-bold"
         >
           保存
         </Button>

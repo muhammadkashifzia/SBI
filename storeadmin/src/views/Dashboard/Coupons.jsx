@@ -23,6 +23,7 @@ function Coupons() {
       discount: "サービス料10％別途",
     },
   ]);
+
   const handleConfirmDelete = () => {
     setCoupons(coupons.filter((c) => c.id !== deleteIndex));
     setDeleteIndex(null);
@@ -50,14 +51,12 @@ function Coupons() {
 
   const handleSaveCoupon = (couponData) => {
     if (editingCoupon) {
-      // Update existing coupon
       setCoupons(
         coupons.map((c) =>
           c.id === editingCoupon.id ? { ...c, ...couponData } : c
         )
       );
     } else {
-      // Add new coupon
       const newCoupon = {
         ...couponData,
         id: Date.now(),
@@ -66,10 +65,6 @@ function Coupons() {
       setCoupons([...coupons, newCoupon]);
     }
     setIsModalOpen(false);
-  };
-
-  const deleteCoupon = (id) => {
-    setCoupons(coupons.filter((coupon) => coupon.id !== id));
   };
 
   const handleProfileCheckChange = (key) => {
@@ -83,12 +78,14 @@ function Coupons() {
 
   return (
     <div>
-      <div className="p-[20px] ">
-        <div className="flex justify-between items-center mt-[12px] mb-[20px]">
-          <h2 className="text-[24px] font-bold text-[#000000]">クーポン</h2>
+      <div className="p-[20px] bg-white">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-[10px] sm:gap-0 mt-[12px] mb-[20px]">
+          <h2 className="text-[20px] sm:text-[22px] lg:text-[24px] font-semibold sm:font-bold text-[#000000]">
+            クーポン
+          </h2>
           <Button
             onClick={handleAddCoupon}
-            className="bg-[#006BA6] hover:bg-[#006BA6]  h-[40px] w-[150px] text-white cursor-pointer font-bold px-[26px] py-[9px] rounded-[4px]"
+            className="bg-[#006BA6] hover:bg-[#006BA6] h-[40px] w-full sm:w-[150px] text-white cursor-pointer font-bold px-[26px] py-[9px] rounded-[4px]"
           >
             新規追加
           </Button>
@@ -96,13 +93,13 @@ function Coupons() {
         {coupons.map((coupon) => (
           <div
             key={coupon.id}
-            className="bg-white rounded-[5px] border border-[#CDCDCD]"
+            className="bg-white rounded-[5px] border border-[#CDCDCD] mb-[20px]"
           >
-            <div className="flex space-x-[20px]">
-              <div className="relative w-[212px] h-[358px] bg-[#006BA6] rounded-[5px] flex flex-col items-center justify-center text-white">
+            <div className="flex flex-col sm:flex-row gap-[16px] sm:gap-[20px]">
+              <div className="relative w-full sm:w-[212px] h-[220px] sm:h-[358px] bg-[#006BA6] rounded-[5px] flex flex-col items-center justify-center text-white">
                 <img
                   src="/svg/dashboard/delete.svg"
-                  className="w-[20px] cursor-pointer h-[20px] absolute top-[10px] left-[10px] "
+                  className="w-[20px] cursor-pointer h-[20px] absolute top-[10px] left-[10px]"
                   onClick={() => setDeleteIndex(coupon.id)}
                   alt="Delete"
                 />
@@ -111,42 +108,37 @@ function Coupons() {
                   src="/svg/shared/coupns.svg"
                   alt="クーポンアイコン"
                 />
-                <span className="text-[28px] text-[#FFFFFF] font-bold mt-2">
+                <span className="text-[22px] sm:text-[24px] text-[#FFFFFF] font-bold mt-2">
                   クーポン
                 </span>
               </div>
 
-              <div className="flex-1 py-[20px] flex flex-col gap-[30px] ">
-                <div>
-                  <h3 className="text-[24px] font-bold text-[#2C3237] ">
-                    {coupon.title}
-                  </h3>
-                </div>
+              <div className="flex-1  flex flex-col gap-[20px] sm:gap-[30px]  px-[10px]">
+                <h3 className="text-[18px] sm:text-[20px] lg:text-[24px] font-bold text-[#2C3237]">
+                  {coupon.title}
+                </h3>
 
-                <div className="flex items-start gap-[30px]">
-                  <Button className="bg-[#9F8C5B]  hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium cursor-pointer text-[16px] px-[16px] py-[4px] rounded-[3px]">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-[10px] sm:gap-[30px]">
+                  <Button className="bg-[#9F8C5B] hover:bg-[#9F8C5B] h-[31px] w-[112px] text-[14px] sm:text-[16px] font-medium cursor-pointer px-[16px] py-[4px] rounded-[3px]">
                     ご利用条件
                   </Button>
-                  <p className="text-[16px] text-[#2C3237] font-medium flex-1">
+                  <p className="text-[14px] sm:text-[16px] text-[#2C3237] font-medium">
                     {coupon.conditions}
                   </p>
                 </div>
 
-                <div className="flex items-start gap-[30px]">
-                  <Button className="bg-[#9F8C5B] hover:bg-[#9F8C5B] h-[31px] w-[112px] font-medium cursor-pointer text-[16px] px-[16px] py-[4px] rounded-[3px]">
+                <div className="flex flex-col sm:flex-row sm:items-start gap-[10px] sm:gap-[30px]">
+                  <Button className="bg-[#9F8C5B] hover:bg-[#9F8C5B] h-[31px] w-[112px] text-[14px] sm:text-[16px] font-medium cursor-pointer px-[16px] py-[4px] rounded-[3px]">
                     備考
                   </Button>
-
-                  <div className="flex-1">
-                    <p className="text-[16px] text-[#2C3237] font-medium flex-1">
-                      {coupon.discount}
-                    </p>
-                  </div>
+                  <p className="text-[14px] sm:text-[16px] text-[#2C3237] font-medium">
+                    {coupon.discount}
+                  </p>
                 </div>
 
-                <div className="text-[16px] text-[#2C3237] font-medium flex-1">
+                <p className="text-[14px] sm:text-[16px] text-[#2C3237] font-medium">
                   {coupon.fileId}
-                </div>
+                </p>
               </div>
             </div>
           </div>
@@ -168,7 +160,7 @@ function Coupons() {
             isProfileComplete={isProfileComplete}
           />
         )}
-      </div>{" "}
+      </div>
       <div className="my-[30px] flex justify-start">
         <Button
           className="px-[26px] py-[14px] bg-[#006BA6] text-white rounded-[4px] hover:bg-[#006BA6] cursor-pointer w-[150px] h-[50px] font-bold"

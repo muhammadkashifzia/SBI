@@ -10,43 +10,32 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
   };
 
   return (
-    <div className="w-[351px] h-[452px]">
+    <div className="w-full sm:w-[48%] lg:w-[351px] h-auto border rounded-[5px] overflow-hidden shadow-sm">
       <div className="relative h-[197px]">
         <div className="flex items-center absolute top-[12px] left-2 gap-[10px] z-10">
-          <button
-            onClick={onEdit}
-            className="text-[#006BA6] hover:text-[#005a8c]"
-          >
+          <button onClick={onEdit}>
             <img src="/svg/dashboard/edit.svg" alt="Edit" className="w-[20px] cursor-pointer" />
           </button>
-          <button
-            onClick={() => setShowDeleteModal(true)}
-            className="text-red-500 hover:text-red-700"
-          >
-            <img
-              src="/svg/dashboard/reddelete.svg"
-              alt="Delete"
-              className="w-[20px] cursor-pointer"
-            />
+          <button onClick={() => setShowDeleteModal(true)}>
+            <img src="/svg/dashboard/reddelete.svg" alt="Delete" className="w-[20px] cursor-pointer" />
           </button>
         </div>
 
         {product?.image && (
           <img
-            src={product?.image}
-            alt={product?.title}
-            className="w-full h-full object-cover rounded-[5px]"
+            src={product.image}
+            alt={product.title}
+            className="w-full h-full object-cover"
           />
         )}
       </div>
 
-      <div className="p-[20px] flex flex-col gap-[15px]">
-        <h3 className="font-bold text-[20px]">{product.title}</h3>
-        <span className="font-bold">¥{product.originalPrice}</span>
-        <p className="text-[16px] text-[#2C3237]">{product.description}</p>
+      <div className="p-[16px] flex flex-col gap-[10px] bg-[#F3F3F3]">
+        <h3 className="font-bold text-[18px] sm:text-[20px]">{product.title}</h3>
+        <span className="font-bold text-[14px] sm:text-[15px]">{product.originalPrice}</span>
+        <p className="text-[14px] sm:text-[16px] text-[#2C3237]">{product.description}</p>
       </div>
 
-      {/* Delete Modal */}
       {showDeleteModal && (
         <DeleteConfirmModal
           onClose={() => setShowDeleteModal(false)}

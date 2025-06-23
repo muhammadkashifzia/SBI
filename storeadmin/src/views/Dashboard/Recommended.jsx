@@ -29,7 +29,6 @@ const ProductsSection = () => {
         "こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。こちらはおすすめ商品・サービスの参考文章です。こちらには店舗が記載した文章が表示されます。",
       image: "/public/demo.png",
     },
-    // Add more sample products as needed
   ]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -52,14 +51,12 @@ const ProductsSection = () => {
 
   const handleSaveProduct = (productData) => {
     if (editingProduct) {
-      // Update existing product
       setProducts(
         products.map((p) =>
           p.id === editingProduct.id ? { ...p, ...productData } : p
         )
       );
     } else {
-      // Add new product
       const newProduct = {
         ...productData,
         id: Math.max(0, ...products.map((p) => p.id)) + 1,
@@ -70,19 +67,19 @@ const ProductsSection = () => {
 
   return (
     <>
-      <div className="p-[20px] ">
+      <div className="p-[20px] bg-white">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-[28px] font-bold text-[#2C3237]">
+          <h2 className="text-[22px] sm:text-[24px] lg:text-[28px] font-semibold sm:font-bold text-[#2C3237]">
             おすすめの商品・サービス
           </h2>
           <Button
             onClick={handleAddProduct}
-            className="bg-[#006BA6] text-[16px] rounded-[4px] font-bold cursor-pointer text-[#FFFFFF] w-[150px] h-[36px]"
+            className="bg-[#006BA6] text-[14px] sm:text-[15px] lg:text-[16px] rounded-[4px] font-bold cursor-pointer text-[#FFFFFF] w-[140px] sm:w-[150px] h-[36px]"
           >
             商品を追加
           </Button>
         </div>
-        <div className="flex flex-wrap gap-[30px]">
+        <div className="flex flex-wrap gap-[16px] sm:gap-[20px] md:gap-[24px] lg:gap-[30px] justify-center sm:justify-start">
           {products.map((product) => (
             <ProductCard
               key={product.id}
@@ -98,12 +95,12 @@ const ProductsSection = () => {
             onClose={() => setIsModalOpen(false)}
             onSave={handleSaveProduct}
           />
-        )}{" "}
+        )}
       </div>
-      <div className="flex justify-start  my-[30px]">
+      <div className="flex justify-start my-[30px]">
         <Button
           type="button"
-          onClick={() => console.log(schedule)}
+          onClick={() => console.log("Save clicked")}
           className="bg-[#006BA6] hover:bg-[#005a8c] text-white px-6 py-2 cursor-pointer rounded w-[150px] !h-[50px]"
         >
           保存
